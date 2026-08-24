@@ -1329,11 +1329,11 @@ export const FacultyEndorsementsSection: React.FC<{
                       {/* Main Row: Prominent Thumbnail + Signatory Info + View/Upload Actions */}
                       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 w-full">
                         <div className="flex flex-row items-start gap-4 min-w-0 flex-1 w-full max-w-full flex-wrap xs:flex-nowrap">
-                          {/* Large Document Thumbnail Preview with Upload Trigger */}
+                          {/* Large Document Thumbnail Preview */}
                           <div 
                             onClick={() => toggleInlineCardDoc(item.id)}
                             className="relative group cursor-pointer shrink-0 rounded-xl overflow-hidden border-2 border-white ring-1 ring-[#3c6382]/30 shadow-md bg-white hover:ring-[#2c5282] hover:shadow-lg transition-all duration-200"
-                            title="Click to toggle letterhead preview or use Upload button below"
+                            title="Click to toggle letterhead preview"
                             style={{ width: '80px', height: '104px', flexShrink: 0 }}
                           >
                             <img 
@@ -1386,33 +1386,8 @@ export const FacultyEndorsementsSection: React.FC<{
                           </div>
                         </div>
 
-                        {/* Action Buttons: Direct Upload Trigger, View, and Full Modal */}
+                        {/* Action Buttons: View, and Full Modal */}
                         <div className="flex items-center gap-2 shrink-0 self-stretch lg:self-center justify-end pt-2 lg:pt-0 border-t lg:border-t-0 border-[#f1ded7] flex-wrap xs:flex-nowrap">
-                          {/* Upload / Replace Original Document Button */}
-                          <button
-                            type="button"
-                            onClick={() => document.getElementById(`endorsement-upload-${item.id}`)?.click()}
-                            disabled={isSecuringThisCard}
-                            className="px-3.5 py-2 text-xs font-semibold rounded-xl bg-orange-50 hover:bg-orange-100 text-[#df5837] border border-[#f1ded7] transition-all cursor-pointer flex items-center gap-1.5 shadow-2xs whitespace-nowrap active:scale-95 disabled:opacity-50"
-                            title={`Upload or replace original PDF / image file for ${item.recommenderName}`}
-                          >
-                            <Upload className="w-3.5 h-3.5 text-[#df5837]" />
-                            <span>{hasCustomUpload ? 'Replace Document' : 'Upload Original Doc'}</span>
-                          </button>
-
-                          {/* Revert / Reset Button if Custom Upload is present */}
-                          {hasCustomUpload && (
-                            <button
-                              type="button"
-                              onClick={(e) => handleResetToDefault(item.id, e)}
-                              className="px-2.5 py-2 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200 transition cursor-pointer flex items-center gap-1 shadow-2xs whitespace-nowrap"
-                              title="Reset to default official letterhead scan"
-                            >
-                              <RefreshCw className="w-3 h-3 text-stone-500" />
-                              <span className="hidden sm:inline">Reset</span>
-                            </button>
-                          )}
-
                           {/* Toggle Inline Preview */}
                           <button 
                             type="button" 
@@ -1449,14 +1424,6 @@ export const FacultyEndorsementsSection: React.FC<{
                                 <span className="break-words">{item.recommenderName} • {item.institution}</span>
                               </span>
                               <div className="flex items-center gap-2">
-                                <button
-                                  type="button"
-                                  onClick={() => document.getElementById(`endorsement-upload-${item.id}`)?.click()}
-                                  className="text-[11px] text-[#df5837] font-bold hover:underline flex items-center gap-1 cursor-pointer"
-                                >
-                                  <Upload className="w-3 h-3" />
-                                  <span>Replace File</span>
-                                </button>
                                 <span className="text-[11px] text-[#2c5282] font-bold bg-[#eaf1f8] px-2.5 py-0.5 rounded-full border border-[#3c6382]/25 shrink-0">
                                   {hasCustomUpload ? 'Custom Attached Scan' : 'Verified Letterhead Scan'}
                                 </span>
