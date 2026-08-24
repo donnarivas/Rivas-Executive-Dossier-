@@ -323,12 +323,8 @@ dar159@georgetown.edu`;
             
             {/* Left Side: Circular Headshot + Name + Badge + Subtitle */}
             <div className="flex items-center gap-4 sm:gap-5">
-              <div
-                onClick={openHeroPhotoModal}
-                className="relative group cursor-pointer shrink-0"
-                title="Click to edit or embed Hero Masthead media"
-              >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D9532F]/40 shadow-sm overflow-hidden bg-[#1E140F] flex items-center justify-center text-white transition-all group-hover:border-[#D9532F] group-hover:scale-105">
+              <div className="relative shrink-0">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D9532F]/40 shadow-sm overflow-hidden bg-[#1E140F] flex items-center justify-center text-white">
                   {heroPhoto ? (
                     isVideoMedia(heroPhoto) ? (
                       <video
@@ -364,16 +360,6 @@ dar159@georgetown.edu`;
                     </div>
                   )}
                 </div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    openHeroPhotoModal();
-                  }}
-                  className="absolute -bottom-1 -right-1 p-1.5 bg-white rounded-full border border-stone-200 shadow-xs text-stone-600 hover:text-[#D9532F] transition-colors cursor-pointer"
-                  title="Edit Hero Masthead Media"
-                >
-                  <Camera className="w-3.5 h-3.5 text-[#D9532F]" />
-                </button>
               </div>
 
               <div className="space-y-1">
