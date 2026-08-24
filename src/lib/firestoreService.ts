@@ -148,6 +148,10 @@ export async function saveEndorsementToFirestore(item: EndorsementItem): Promise
     const docRef = doc(db, ENDORSEMENTS_COLLECTION, item.id);
     // Sanitize item to prevent undefined fields
     const sanitized = JSON.parse(JSON.stringify(item));
+    // If base64 payload is large (> 400KB), truncate or reference local storage so Firestore 1MB limits are never exceeded
+    if (sanitized.attachedUrl && typeof sanitized.attachedUrl === 'string' && sanitized.attachedUrl.startsWith('data:') && sanitized.attachedUrl.length > 400000) {
+      sanitized.attachedUrl = 'indexeddb-stored';
+    }
     await setDoc(docRef, {
       ...sanitized,
       isReadOnly: true,

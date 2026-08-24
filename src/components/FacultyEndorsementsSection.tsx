@@ -416,6 +416,7 @@ export const FacultyEndorsementsSection: React.FC<{
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [highlightedCardId, setHighlightedCardId] = useState<string | null>(null);
   const [openInlineCardDocIds, setOpenInlineCardDocIds] = useState<Record<string, boolean>>({});
+  const [dragOverCardId, setDragOverCardId] = useState<string | null>(null);
 
   const getCardAnchorId = (id: string) => {
     if (id.includes('rosemergy')) return 'card-rosemergy';
@@ -671,13 +672,43 @@ export const FacultyEndorsementsSection: React.FC<{
       });
 
       persistEndorsements(updated, targetItem || undefined);
+      // Automatically open inline document preview so the user immediately sees the uploaded scan
+      setOpenInlineCardDocIds(prev => ({ ...prev, [id]: true }));
       if (onNotify) {
-        onNotify(`✓ Document "${file.name}" successfully saved & stored under Faculty Endorsements!`);
+        onNotify(`✓ Document "${file.name}" successfully attached and secured for ${targetItem ? (targetItem as any).recommenderName : id}!`);
       }
     } catch (err: any) {
       if (onNotify) onNotify(err.message || 'Failed to ingest file.');
     } finally {
       setSecuringCardId(null);
+    }
+  };
+
+  // Reset Attached File on Card to Default Official Letterhead
+  const handleResetToDefault = async (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    try {
+      await DossierStorage.deleteAsset(`rec-${id}`);
+    } catch {
+      // Non-blocking
+    }
+    const defaultMatch = INITIAL_ENDORSEMENTS_REGISTRY.find(d => d.id === id);
+    let updatedItem: EndorsementItem | null = null;
+    const updated = endorsements.map(item => {
+      if (item.id === id) {
+        if (defaultMatch) {
+          updatedItem = { ...defaultMatch };
+        } else {
+          const { isAttached, attachedUrl, attachedFileName, attachedFileSize, attachedFileType, ...rest } = item;
+          updatedItem = { ...rest, isAttached: false };
+        }
+        return updatedItem;
+      }
+      return item;
+    });
+    persistEndorsements(updated, updatedItem || undefined);
+    if (onNotify) {
+      onNotify('Restored original verified letterhead document.');
     }
   };
 
@@ -874,7 +905,7 @@ export const FacultyEndorsementsSection: React.FC<{
           </p>
         </div>
 
-        {/* Institution Filter Tabs */}
+        {/* Institution Filter Tabs & Action Controls */}
         <div className="flex items-center gap-3 flex-wrap">
           {/* Filter Pills */}
           <div className="flex items-center gap-1 flex-wrap">
@@ -899,6 +930,17 @@ export const FacultyEndorsementsSection: React.FC<{
               </button>
             ))}
           </div>
+
+          {/* Quick Embed Button */}
+          <button
+            type="button"
+            onClick={() => setIsEmbedModalOpen(true)}
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold bg-[#D9532F] hover:bg-[#C2410C] text-white transition-all cursor-pointer shadow-xs active:scale-95"
+            title="Upload and embed a new recommendation letter or executive reference"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>Embed Letter</span>
+          </button>
         </div>
       </div>
 
@@ -1113,7 +1155,7 @@ export const FacultyEndorsementsSection: React.FC<{
               <input
                 type="file"
                 id={`endorsement-upload-${item.id}`}
-                accept=".pdf,.png,.jpg,.jpeg"
+                accept=".pdf,.png,.jpg,.jpeg,.webp,.docx"
                 className="hidden"
                 onChange={(e) => {
                   const file = e.target.files?.[0];
@@ -1216,21 +1258,82 @@ export const FacultyEndorsementsSection: React.FC<{
                   </blockquote>
                 </div>
 
-                {/* In-Place Document Attachment Card */}
+                {/* In-Place Document Attachment Card & Upload Interface */}
                 {(() => {
                   const isInlineDocOpen = !!openInlineCardDocIds[item.id];
                   const docThumbnailUrl = item.attachedUrl || 'IMG_0702.jpeg';
+                  const isSecuringThisCard = securingCardId === item.id;
+                  const isDraggingOverThis = dragOverCardId === item.id;
+                  const hasCustomUpload = Boolean(
+                    item.isAttached &&
+                    item.attachedUrl && (
+                      item.attachedUrl.startsWith('data:') ||
+                      item.attachedUrl.startsWith('blob:') ||
+                      item.attachedUrl === 'indexeddb-stored' ||
+                      (item.attachedFileName && !item.attachedFileName.includes('Recommendation.pdf') && item.attachedFileName !== 'IMG_0702.jpeg')
+                    )
+                  );
 
                   return (
-                    <div className="mt-4 p-4 sm:p-5 rounded-2xl border border-[#f1ded7] bg-white/95 font-sans shadow-xs transition-all overflow-visible max-w-full">
-                      {/* Main Row: Prominent Thumbnail + Signatory Info + View Action */}
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 w-full">
+                    <div 
+                      onDragOver={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setDragOverCardId(item.id);
+                      }}
+                      onDragLeave={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setDragOverCardId(null);
+                      }}
+                      onDrop={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setDragOverCardId(null);
+                        const droppedFile = e.dataTransfer.files?.[0];
+                        if (droppedFile) {
+                          handleCardInlineUpload(item.id, droppedFile);
+                        }
+                      }}
+                      className={`relative mt-4 p-4 sm:p-5 rounded-2xl border transition-all overflow-visible max-w-full font-sans shadow-xs ${
+                        isDraggingOverThis
+                          ? 'border-2 border-dashed border-[#df5837] bg-orange-50/70 ring-4 ring-[#df5837]/20 scale-[1.01]'
+                          : hasCustomUpload
+                          ? 'border-emerald-200 bg-emerald-50/20'
+                          : 'border-[#f1ded7] bg-white/95'
+                      }`}
+                    >
+                      {/* Drag & Drop Overlay */}
+                      {isDraggingOverThis && (
+                        <div className="absolute inset-0 bg-white/90 rounded-2xl flex items-center justify-center z-20 border-2 border-dashed border-[#df5837] p-4 text-center">
+                          <div className="flex items-center gap-2 text-[#df5837] font-mono font-bold text-xs sm:text-sm">
+                            <Upload className="w-5 h-5 animate-bounce" />
+                            <span>Drop original PDF or image to embed under {item.recommenderName}</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Processing / Securing State */}
+                      {isSecuringThisCard && (
+                        <div className="mb-3.5 px-3.5 py-2 bg-amber-50 border border-amber-300 rounded-xl text-xs font-mono text-amber-900 flex items-center justify-between animate-pulse">
+                          <span className="flex items-center gap-2">
+                            <RefreshCw className="w-4 h-4 animate-spin text-[#df5837]" />
+                            <span>Securing document to Local Vault & Firestore...</span>
+                          </span>
+                          <span className="text-[10px] font-bold text-amber-700 uppercase bg-amber-100 px-2 py-0.5 rounded">
+                            Storing
+                          </span>
+                        </div>
+                      )}
+
+                      {/* Main Row: Prominent Thumbnail + Signatory Info + View/Upload Actions */}
+                      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 w-full">
                         <div className="flex flex-row items-start gap-4 min-w-0 flex-1 w-full max-w-full flex-wrap xs:flex-nowrap">
-                          {/* Large Document Thumbnail Preview */}
+                          {/* Large Document Thumbnail Preview with Upload Trigger */}
                           <div 
                             onClick={() => toggleInlineCardDoc(item.id)}
                             className="relative group cursor-pointer shrink-0 rounded-xl overflow-hidden border-2 border-white ring-1 ring-[#3c6382]/30 shadow-md bg-white hover:ring-[#2c5282] hover:shadow-lg transition-all duration-200"
-                            title="Click to view full letterhead scan"
+                            title="Click to toggle letterhead preview or use Upload button below"
                             style={{ width: '80px', height: '104px', flexShrink: 0 }}
                           >
                             <img 
@@ -1241,23 +1344,37 @@ export const FacultyEndorsementsSection: React.FC<{
                                 (e.target as HTMLImageElement).src = 'IMG_0702.jpeg';
                               }}
                             />
-                            <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors flex items-center justify-center">
-                              <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900/80 text-white text-[10px] font-semibold px-2 py-0.5 rounded shadow-sm flex items-center gap-1">
-                                <Eye className="w-3 h-3 text-[#df5837]" />
+                            <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/30 transition-colors flex flex-col items-center justify-center p-1">
+                              <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900/90 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded shadow-sm flex items-center gap-1">
+                                <Eye className="w-2.5 h-2.5 text-[#df5837]" />
                                 {isInlineDocOpen ? 'Close' : 'View'}
                               </span>
                             </div>
                           </div>
 
-                          {/* Signatory Details & Official Record Badge */}
+                          {/* Signatory Details & Official/Custom Record Badge */}
                           <div className="flex-1 min-w-0 flex flex-col justify-start text-left space-y-1.5 break-words">
-                            <div>
-                              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#eaf1f8] text-[#2c5282] border border-[#3c6382]/25 shadow-2xs">
-                                <FileCheck className="w-3.5 h-3.5 text-[#2c5282] shrink-0" />
-                                Official Record
-                              </span>
+                            <div className="flex items-center gap-2 flex-wrap">
+                              {hasCustomUpload ? (
+                                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-300 shadow-2xs">
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                                  <span>Custom Original Upload Attached</span>
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#eaf1f8] text-[#2c5282] border border-[#3c6382]/25 shadow-2xs">
+                                  <FileCheck className="w-3.5 h-3.5 text-[#2c5282] shrink-0" />
+                                  <span>Official Letterhead Record</span>
+                                </span>
+                              )}
+
+                              {item.attachedFileName && (
+                                <span className="text-[10px] font-mono text-stone-500 bg-stone-100 px-2 py-0.5 rounded-md border border-stone-200 truncate max-w-[220px]">
+                                  {item.attachedFileName} {item.attachedFileSize ? `(${item.attachedFileSize})` : ''}
+                                </span>
+                              )}
                             </div>
-                            <h4 className="prof-name font-bold text-slate-900 text-sm sm:text-base font-serif tracking-tight break-words pb-1 leading-[1.45] overflow-visible">
+
+                            <h4 className="prof-name font-bold text-slate-900 text-sm sm:text-base font-serif tracking-tight break-words pb-0.5 leading-[1.45] overflow-visible">
                               {item.recommenderName}
                             </h4>
                             <p className="text-xs text-stone-600 font-sans leading-relaxed break-words">
@@ -1269,16 +1386,43 @@ export const FacultyEndorsementsSection: React.FC<{
                           </div>
                         </div>
 
-                        {/* Action Buttons */}
-                        <div className="flex items-center gap-2 shrink-0 self-stretch sm:self-center justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-[#f1ded7] flex-wrap xs:flex-nowrap">
+                        {/* Action Buttons: Direct Upload Trigger, View, and Full Modal */}
+                        <div className="flex items-center gap-2 shrink-0 self-stretch lg:self-center justify-end pt-2 lg:pt-0 border-t lg:border-t-0 border-[#f1ded7] flex-wrap xs:flex-nowrap">
+                          {/* Upload / Replace Original Document Button */}
+                          <button
+                            type="button"
+                            onClick={() => document.getElementById(`endorsement-upload-${item.id}`)?.click()}
+                            disabled={isSecuringThisCard}
+                            className="px-3.5 py-2 text-xs font-semibold rounded-xl bg-orange-50 hover:bg-orange-100 text-[#df5837] border border-[#f1ded7] transition-all cursor-pointer flex items-center gap-1.5 shadow-2xs whitespace-nowrap active:scale-95 disabled:opacity-50"
+                            title={`Upload or replace original PDF / image file for ${item.recommenderName}`}
+                          >
+                            <Upload className="w-3.5 h-3.5 text-[#df5837]" />
+                            <span>{hasCustomUpload ? 'Replace Document' : 'Upload Original Doc'}</span>
+                          </button>
+
+                          {/* Revert / Reset Button if Custom Upload is present */}
+                          {hasCustomUpload && (
+                            <button
+                              type="button"
+                              onClick={(e) => handleResetToDefault(item.id, e)}
+                              className="px-2.5 py-2 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200 transition cursor-pointer flex items-center gap-1 shadow-2xs whitespace-nowrap"
+                              title="Reset to default official letterhead scan"
+                            >
+                              <RefreshCw className="w-3 h-3 text-stone-500" />
+                              <span className="hidden sm:inline">Reset</span>
+                            </button>
+                          )}
+
+                          {/* Toggle Inline Preview */}
                           <button 
                             type="button" 
                             onClick={() => toggleInlineCardDoc(item.id)}
                             className="px-4 py-2 text-xs font-semibold rounded-xl bg-[#df5837] hover:bg-[#c94b2d] text-white text-center justify-center inline-flex items-center active:scale-95 transition cursor-pointer shadow-xs whitespace-nowrap"
                           >
-                            {isInlineDocOpen ? 'Close Document' : 'View Attached Document'}
+                            {isInlineDocOpen ? 'Close Preview' : 'View Document'}
                           </button>
 
+                          {/* Full High-Res Modal */}
                           <button
                             type="button"
                             onClick={() => {
@@ -1287,7 +1431,7 @@ export const FacultyEndorsementsSection: React.FC<{
                               setZoomLevel(1);
                             }}
                             className="px-3 py-2 text-xs font-semibold rounded-xl bg-white hover:bg-stone-100 text-stone-700 border border-[#f1ded7] transition cursor-pointer flex items-center gap-1.5 shadow-2xs whitespace-nowrap"
-                            title="Open in High-Resolution Modal"
+                            title="Open in High-Resolution Modal with zoom & download"
                           >
                             <Maximize2 className="w-3.5 h-3.5 text-stone-500" />
                             <span className="hidden md:inline">Full Letterhead</span>
@@ -1304,9 +1448,19 @@ export const FacultyEndorsementsSection: React.FC<{
                                 <FileCheck className="w-4 h-4 text-[#2c5282] shrink-0" />
                                 <span className="break-words">{item.recommenderName} • {item.institution}</span>
                               </span>
-                              <span className="text-[11px] text-[#2c5282] font-bold bg-[#eaf1f8] px-2.5 py-0.5 rounded-full border border-[#3c6382]/25 shrink-0">
-                                Verified Letterhead Scan
-                              </span>
+                              <div className="flex items-center gap-2">
+                                <button
+                                  type="button"
+                                  onClick={() => document.getElementById(`endorsement-upload-${item.id}`)?.click()}
+                                  className="text-[11px] text-[#df5837] font-bold hover:underline flex items-center gap-1 cursor-pointer"
+                                >
+                                  <Upload className="w-3 h-3" />
+                                  <span>Replace File</span>
+                                </button>
+                                <span className="text-[11px] text-[#2c5282] font-bold bg-[#eaf1f8] px-2.5 py-0.5 rounded-full border border-[#3c6382]/25 shrink-0">
+                                  {hasCustomUpload ? 'Custom Attached Scan' : 'Verified Letterhead Scan'}
+                                </span>
+                              </div>
                             </div>
 
                             {item.attachedFileType === 'pdf' || (item.attachedUrl && (item.attachedUrl.startsWith('data:application/pdf') || item.attachedUrl.endsWith('.pdf'))) ? (
