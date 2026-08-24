@@ -1,0 +1,112 @@
+{
+  "entities": {
+    "endorsements": {
+      "title": "Endorsements & Recommendation Documents",
+      "description": "Faculty and executive recommendation letters, transcripts, attached files, and strategic analyses.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "recommenderName": { "type": "string" },
+        "recommenderTitle": { "type": "string" },
+        "department": { "type": "string" },
+        "institution": { "type": "string" },
+        "institutionCategory": { "type": "string" },
+        "date": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "badge": { "type": "string" },
+        "featuredQuote": { "type": "string" },
+        "fullTranscript": { "type": "string" },
+        "strategicAnalysis": { "type": "object" },
+        "isAttached": { "type": "boolean" },
+        "attachedUrl": { "type": "string" },
+        "attachedFileName": { "type": "string" },
+        "attachedFileSize": { "type": "string" },
+        "attachedFileType": { "type": "string" },
+        "isCustom": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["recommenderName", "institution"]
+    },
+    "custom_documents": {
+      "title": "Portfolio Credential Documents",
+      "description": "Custom user-uploaded academic transcripts, diplomas, certificates, and blueprints for Section 07.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "fileType": { "type": "string" },
+        "documentUrl": { "type": "string" },
+        "fileName": { "type": "string" },
+        "fileSize": { "type": "string" },
+        "caption": { "type": "string" },
+        "institution": { "type": "string" },
+        "issuer": { "type": "string" },
+        "date": { "type": "string" },
+        "verifiedStatus": { "type": "string" },
+        "highlightQuotes": { "type": "array", "items": { "type": "string" } },
+        "fullDocumentText": { "type": "string" },
+        "isCustom": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "category"]
+    },
+    "evaluations": {
+      "title": "Hiring Committee Evaluation Feedback",
+      "description": "Executive review notes, scorecards, and inquiries submitted by hiring committee members and CEO.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reviewerName": { "type": "string" },
+        "reviewerEmail": { "type": "string" },
+        "roleCategory": { "type": "string" },
+        "scoreOverall": { "type": "number" },
+        "strategicAlignmentScore": { "type": "number" },
+        "quantitativeDisciplineScore": { "type": "number" },
+        "executivePoiseScore": { "type": "number" },
+        "generalComments": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["reviewerName", "generalComments"]
+    },
+    "application_activity": {
+      "title": "Candidate Application Activity & Interactions",
+      "description": "Audit trail and event logging for candidate application progress, executive perspective switches, document opens, and contact transmissions.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "activityType": { "type": "string" },
+        "action": { "type": "string" },
+        "sectionId": { "type": "string" },
+        "sectionName": { "type": "string" },
+        "details": { "type": "string" },
+        "metadata": { "type": "object" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["activityType", "action"]
+    }
+  },
+  "firestoreRules": {
+    "endorsements": {
+      "read": "true",
+      "write": "true"
+    },
+    "custom_documents": {
+      "read": "true",
+      "write": "true"
+    },
+    "evaluations": {
+      "read": "true",
+      "write": "true"
+    },
+    "application_activity": {
+      "read": "true",
+      "write": "true"
+    }
+  }
+}
