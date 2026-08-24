@@ -33,16 +33,16 @@ const INITIAL_MESSAGES: Message[] = [
   {
     id: 'welcome-1',
     sender: 'ai',
-    text: `Greetings! I am Donna Aseret Rivas's Chief of Staff Strategic AI Assistant. I have indexed Donna's full academic credentials (Pepperdine Caruso Law, Georgetown Strategic Management, Harvard Extension School, Cal Poly Pomona 4.0 GPA), multi-site clinic operational blueprints, and 90-day onboarding strategy for Oaklin Lane. How can I assist your evaluation today?`,
+    text: `Greetings! I am Donna Aseret Rivas's Consulting & Strategy AI Assistant. I have indexed Donna's full academic credentials (Pepperdine Caruso Law, Georgetown Strategic Management, Harvard Extension School, Cal Poly Pomona 4.0 GPA), MECE consulting frameworks, and 90-day action plan for Oaklin Lane. How can I assist your evaluation today?`,
     timestamp: 'Just now',
     tags: ['Overview', 'Credentials', 'Oaklin Lane Fit']
   }
 ];
 
 const SUGGESTED_PROMPTS = [
-  "What makes Donna ideal for Oaklin Lane's Chief of Staff role?",
+  "What makes Donna ideal for Oaklin Lane's Consulting & Strategy role?",
   "How does legal training from Pepperdine enhance operational execution?",
-  "Summarize the 90-Day Clinic Expansion Roadmap",
+  "Summarize the 90-Day Consulting Action Plan",
   "What is Donna's experience with financial modeling & KPIs?"
 ];
 
@@ -71,28 +71,28 @@ export const CandidateChatAssistant: React.FC<CandidateChatAssistantProps> = ({
 
     if (q.includes('oaklin') || q.includes('why') || q.includes('ideal') || q.includes('fit') || q.includes('hire')) {
       return {
-        text: `Donna is uniquely tailored for Oaklin Lane's Chief of Staff in Training role because of her cross-disciplinary mastery:
-1. Executive Force Multiplier: Trained to relieve CEO/Partner bandwidth by transforming high-level strategic objectives into standardized operating playbooks.
-2. Pediatric Multi-Site Scaling Focus: Passionate about resolving operational bottlenecks in speech, occupational, and physical therapy to directly expand early-intervention clinical capacity.
-3. Legal, Financial & Strategic Synthesis: Combining regulatory compliance from Pepperdine Caruso Law with financial modeling from Cal Poly Pomona (4.0 GPA) and strategic management from Georgetown.`,
-        tags: ['Oaklin Lane Fit', 'Strategic Alignment', 'CEO Leverage']
+        text: `Donna is uniquely tailored for Oaklin Lane's Consulting & Strategy Intern role because of her cross-disciplinary mastery:
+1. Analytical Rigor & Synthesis: Trained to rapidly ingest complex datasets and synthesize structured MECE frameworks and client-ready deliverables.
+2. Pediatric Platform Focus: Dedicated to diagnosing clinic bottlenecks across speech, occupational, and physical therapy to expand early-intervention clinical capacity.
+3. Legal, Financial & Strategic Synthesis: Combining regulatory diligence from Pepperdine Caruso Law with financial modeling from Cal Poly Pomona (4.0 GPA) and strategic management from Georgetown.`,
+        tags: ['Oaklin Lane Fit', 'Strategic Alignment', 'Consulting Rigor']
       };
     }
 
     if (q.includes('law') || q.includes('pepperdine') || q.includes('legal') || q.includes('compliance')) {
       return {
-        text: `At Pepperdine University Caruso School of Law, Donna mastered statutory interpretation, healthcare compliance diligence, risk containment frameworks, and contract negotiation. In a high-growth multi-site pediatric healthcare setting, this enables her to review provider credentialing standards, safeguard patient privacy protocols, and accelerate commercial leases without incurring external legal latency.`,
+        text: `At Pepperdine University Caruso School of Law, Donna mastered statutory interpretation, healthcare compliance diligence, risk containment frameworks, and contract negotiation. In a high-growth multi-site pediatric healthcare setting, this enables her to review provider credentialing standards, safeguard patient privacy protocols, and evaluate regulatory matrices with zero defect.`,
         tags: ['Pepperdine Law', 'Compliance', 'Risk Mitigation']
       };
     }
 
     if (q.includes('90') || q.includes('roadmap') || q.includes('onboard') || q.includes('plan') || q.includes('timeline')) {
       return {
-        text: `Donna's 90-Day Chief of Staff Execution Blueprint is organized into three distinct phases:
-• Days 1–30 (Diagnosis & Alignment): Shadow executive leadership, audit clinic utilization rates, map therapist onboarding friction, and establish weekly executive OKRs.
-• Days 31–60 (Standardization & Playbooks): Publish the De Novo Clinic Opening Playbook, streamline intake pipelines, and implement KPI dashboard rhythms.
-• Days 61–90 (Velocity & Optimization): Institute automated provider scheduling, pilot expansion feasibility models, and deliver the Board-ready Quarterly Strategic Review.`,
-        tags: ['90-Day Roadmap', 'Execution Playbook', 'Clinic Scaling']
+        text: `Donna's 90-Day Consulting & Strategy Action Plan is organized into three distinct phases:
+• Days 1–30 (Absorb & Structure): Audit project archives, master research frameworks, establish communication cadences with engagement leads, and support data gathering.
+• Days 31–60 (Analyze & Synthesize): Build independent analytical models, draft structured slides and memos for active engagements, and identify operational bottlenecks.
+• Days 61–90 (Own & Deliver): Lead discrete workstream modules, deliver polished client-ready presentations, and codify reusable consulting toolkits for future cohorts.`,
+        tags: ['90-Day Plan', 'Consulting Toolkits', 'Clinic Scaling']
       };
     }
 
@@ -183,7 +183,7 @@ export const CandidateChatAssistant: React.FC<CandidateChatAssistantProps> = ({
               <div>
                 <div className="flex items-center gap-1.5">
                   <h4 className="text-xs font-bold text-white tracking-wide font-mono">
-                    CHIEF OF STAFF AI
+                    STRATEGY AI
                   </h4>
                   <span className="w-2 h-2 rounded-full bg-[#D9532F] animate-pulse" />
                 </div>

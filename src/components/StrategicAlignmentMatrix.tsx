@@ -93,7 +93,7 @@ export const StrategicAlignmentMatrix: React.FC = () => {
             <div className="flex items-center justify-between pb-4 border-b border-slate-200">
               <div>
                 <span className="text-[10px] font-black tracking-[0.2em] uppercase text-slate-400">
-                  Chief of Staff Candidate
+                  Consulting & Strategy Intern
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mt-1 uppercase">Donna Aseret Rivas</h3>
                 <p className="text-xs text-slate-600 font-mono">Georgetown SCS • Harvard Ext • Cal Poly Pomona</p>

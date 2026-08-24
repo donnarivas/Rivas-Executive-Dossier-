@@ -189,34 +189,34 @@ export function App() {
   };
 
   const applicationNoteFullText = `OFFICIAL CANDIDATE SUBMISSION
-Executive Memorandum: Strategic Application Note to Chris Callander & TBD Investors
+Executive Memorandum: Strategic Candidate Brief to Chris Callander & Oaklin Lane
 
 TO: Chris Callander, CEO (Oaklin Lane / TBD Investors)
 FROM: Donna Aseret Rivas (dar159@georgetown.edu | (424) 478-1969)
-ROLE TARGET: Chief of Staff in Training / Strategy & Operations
+ROLE TARGET: Consulting & Strategy Intern (Oaklin Lane)
 SUBMISSION CHANNEL: internship@tbdinvestors.com
-SUBJECT: Application for Chief of Staff in Training / Strategic Operations — Donna Aseret Rivas
+SUBJECT: Candidate Brief: Consulting & Strategy Intern — Donna Aseret Rivas
 
-Dear Chris and the TBD Investors Selection Committee,
+Dear Chris and the Oaklin Lane Selection Committee,
 
-I am writing to enthusiastically submit my application for the Chief of Staff in Training / Strategy & Operations position with Oaklin Lane. Having followed the rapid evolution of pediatric therapy platforms backed by institutional growth investors, I recognize that scaling a multi-site clinic model requires far more than operational diligence—it requires an executive office capable of converting strategic vision into relentless on-the-ground operational velocity while uncompromisingly safeguarding clinical quality.
+I am writing to enthusiastically submit my candidate brief for the Consulting & Strategy Intern position with Oaklin Lane. Having analyzed the growth dynamics of pediatric therapy platforms backed by institutional search-fund sponsors, I recognize that scaling a multi-site clinical network requires rigorous consulting craftsmanship—uncovering granular operational truths, structuring unstructured qualitative and quantitative findings into MECE frameworks, and converting strategic hypotheses into client-ready, high-conviction deliverables.
 
-FOUNDATIONAL PREPARATION & ACADEMIC PRIORITIZATION
-Having honed rigorous legal analysis, regulatory compliance, and statutory problem-solving at Pepperdine University, Caruso School of Law, paired with executive strategic intelligence from my Professional Certificate in Strategic Management at Georgetown University, advanced management consulting and ethical leadership coursework at Harvard Extension School, and foundational managerial finance from Cal Poly Pomona (BSBA, 4.0 GPA), I have intentionally engineered a toolkit purpose-built for high-growth executive leverage.
+FOUNDATIONAL PREPARATION & CONSULTING TOOLKIT
+Combining statutory analysis and regulatory diligence from Pepperdine University Caruso School of Law with advanced executive strategy from my Professional Certificate at Georgetown University, management consulting frameworks from Harvard Extension School, and managerial finance from Cal Poly Pomona (BSBA, 4.0 GPA), I have forged an analytical toolkit engineered specifically for top-tier consulting execution.
 
-Three specific strategic factors compel my deep dedication to Oaklin Lane:
+Three core consulting pillars define my strategic value proposition for Oaklin Lane:
 
-1. Multi-Site Pediatric Operational Velocity: Expanding access to Speech, Occupational, and Physical therapy for children with neurodevelopmental and motor challenges changes family trajectories for generations. Early intervention is paramount, and every operational bottleneck resolved directly expands patient care capacity.
-2. Direct Executive Force Multiplier: As Chief of Staff in Training, my objective is to amplify your bandwidth by taking total ownership of cross-functional strategic initiatives—from building clinic opening playbooks and standardizing therapist onboarding, to architecting board-level KPI operating reviews.
-3. Data-Driven Financial & Regulatory Rigor: My background combining legal analysis from Pepperdine Caruso Law with quantitative financial modeling and commercial operations ensures that strategic recommendations are legally compliant, financially viable, and operationally executable.
+1. Diagnostic & Quantitative Research: Executing granular market mapping, provider density demographic evaluations, and clinic unit economic modeling to establish clear baseline benchmarks across regional hubs.
+2. Strategy & Framework Formulation: Translating complex operational findings into structured MECE problem-solving frameworks, gap analyses, and prioritized strategic initiatives.
+3. Operational Execution & Deliverables: Architecting institutional-quality slide decks (Pyramid Principle), executive memorandums, weekly business review cockpits, and codified playbooks that streamline workstreams.
 
-I am prepared to immediately dedicate my analytical rigor, disciplined work ethic, and executive presence to ensure Oaklin Lane exceeds its expansion targets and delivers gold-standard care across every community it enters.
+I am prepared to immediately dedicate my analytical rigor, disciplined research methodology, and client-ready deliverable polish to support Oaklin Lane's strategic growth mandates.
 
 Thank you for your time, consideration, and leadership. I look forward to discussing how I can deliver immediate impact to your strategic priorities.
 
 Sincerely,
 Donna Aseret Rivas
-Candidate for Chief of Staff in Training / Strategic Operations
+Candidate for Consulting & Strategy Intern · Oaklin Lane
 dar159@georgetown.edu`;
 
   const handleCopyApplicationNote = () => {
@@ -294,14 +294,14 @@ dar159@georgetown.edu`;
         <button
           onClick={() => setIsChatAssistantOpen(true)}
           className="group flex items-center gap-2.5 px-4 py-3 bg-[#1E140F]/90 hover:bg-[#1E140F] text-white rounded-2xl shadow-xl border border-[#D9532F]/40 backdrop-blur-xl transition-all duration-200 hover:scale-105 cursor-pointer font-mono text-xs"
-          title="Open Chief of Staff AI Assistant"
+          title="Open Consulting & Strategy AI Assistant"
         >
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D9532F] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#D9532F]"></span>
           </span>
           <Sparkles className="w-4 h-4 text-orange-400 group-hover:rotate-12 transition-transform" />
-          <span className="font-bold hidden sm:inline">Chief of Staff AI</span>
+          <span className="font-bold hidden sm:inline">Strategy AI</span>
           <span className="font-bold sm:hidden">AI</span>
         </button>
       </div>
@@ -318,13 +318,12 @@ dar159@georgetown.edu`;
           id="section-hero"
           className="bg-white/95 backdrop-blur-xl border-[1.5px] border-[#f1ded7] rounded-2xl shadow-sm p-6 md:p-8 space-y-6 transition-all"
         >
-          {/* TOP IDENTITY BLOCK */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            
-            {/* Left Side: Circular Headshot + Name + Badge + Subtitle */}
-            <div className="flex items-center gap-4 sm:gap-5">
+          {/* TOP IDENTITY BLOCK: Side-by-Side Row Layout */}
+          <div className="space-y-4">
+            <div className="flex flex-row items-center sm:items-start gap-4 sm:gap-6">
+              {/* Circular Avatar (Static display, no edit/camera controls) */}
               <div className="relative shrink-0">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D9532F]/40 shadow-sm overflow-hidden bg-[#1E140F] flex items-center justify-center text-white">
+                <div className="w-18 h-18 sm:w-22 sm:h-22 md:w-24 md:h-24 rounded-full border-2 border-[#D9532F]/40 shadow-sm overflow-hidden bg-[#1E140F] flex items-center justify-center text-white">
                   {heroPhoto ? (
                     isVideoMedia(heroPhoto) ? (
                       <video
@@ -354,7 +353,7 @@ dar159@georgetown.edu`;
                     )
                   ) : (
                     <div className="flex flex-col items-center justify-center">
-                      <span className="text-orange-400 font-mono font-bold text-base sm:text-lg tracking-wider">
+                      <span className="text-orange-400 font-mono font-bold text-lg sm:text-xl tracking-wider">
                         {CANDIDATE.monogram}
                       </span>
                     </div>
@@ -362,31 +361,43 @@ dar159@georgetown.edu`;
                 </div>
               </div>
 
-              <div className="space-y-1">
-                <div className="flex items-center gap-2.5 flex-wrap">
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1E140F] tracking-tight font-sans">
-                    Donna Aseret Rivas
-                  </h1>
+              {/* Right-Hand Column: Vertically Stacked Details */}
+              <div className="space-y-1.5 min-w-0 flex-1">
+                {/* 1. Primary Name Heading */}
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1E140F] tracking-tight font-sans">
+                  Donna Aseret Rivas
+                </h1>
+
+                {/* 2. CONSULTING VERIFIED Pill Badge */}
+                <div className="flex items-center gap-2 pt-0.5">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-mono font-bold tracking-wider uppercase bg-[#D9532F]/10 text-[#C2410C] border border-[#f1ded7] whitespace-nowrap">
+                    <ShieldCheck className="w-3 h-3 text-[#D9532F]" />
+                    CONSULTING VERIFIED
+                  </span>
                 </div>
 
+                {/* 3. Role Designation */}
                 <p className="text-xs sm:text-sm md:text-base text-[#D9532F] font-semibold font-sans leading-snug">
-                  Chief of Staff in Training • Corporate Finance and Strategy Intern
+                  Consulting & Strategy Intern • Corporate Finance and Strategy Intern
                 </p>
-                <p className="text-xs sm:text-sm text-slate-600 font-sans font-medium mt-1 leading-[1.4]">
+
+                {/* 4. Companies */}
+                <p className="text-xs sm:text-sm text-slate-600 font-sans font-medium leading-[1.4]">
                   Oaklin Lane | TBD Investors
                 </p>
               </div>
             </div>
 
-            {/* Right Side: Action Cluster (AI Co-Pilot) */}
-            <div className="flex items-center gap-3 flex-wrap self-start md:self-center">
+            {/* AI Co-Pilot Button Positioned Below the Avatar/Name Row */}
+            <div className="pt-1">
               <button
+                type="button"
                 onClick={() => setIsChatAssistantOpen(true)}
-                className="px-4 py-2.5 bg-[#D9532F]/10 hover:bg-[#D9532F]/15 text-[#D9532F] border border-[#D9532F]/30 rounded-full text-xs font-semibold shadow-xs flex items-center gap-2 transition-all hover:-translate-y-0.5 cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#D9532F]/10 hover:bg-[#D9532F]/15 text-[#D9532F] border border-[#D9532F]/30 rounded-full text-xs font-semibold shadow-xs transition-all hover:-translate-y-0.5 cursor-pointer active:scale-95"
                 title="Launch AI Co-Pilot Assistant"
               >
-                <Sparkles className="w-4 h-4 text-[#D9532F]" />
-                <span>AI Co-Pilot</span>
+                <Sparkles className="w-3.5 h-3.5 text-[#D9532F]" />
+                <span>+ AI Co-Pilot</span>
               </button>
             </div>
           </div>
@@ -544,7 +555,7 @@ dar159@georgetown.edu`;
                       {CANDIDATE.fullName}
                     </h1>
                     <p className="text-xs font-bold text-[#D9532F] font-mono leading-snug">
-                      Chief of Staff in Training • Corporate Finance & Strategy Intern
+                      Consulting & Strategy Intern • Corporate Finance & Strategy Intern
                     </p>
                     <p className="text-[11px] font-mono text-slate-500">
                       Oaklin Lane | TBD Investors
@@ -723,7 +734,7 @@ dar159@georgetown.edu`;
                             ? 'bg-white/15 text-amber-200'
                             : 'bg-[#eaf1f8] text-[#2c5282] border border-[#3c6382]/25'
                         }`}>
-                          Chief of Staff Track
+                          Consulting & Strategy Track
                         </span>
                       </div>
                       <div className="flex items-center gap-2 pt-0.5">
@@ -1134,7 +1145,7 @@ dar159@georgetown.edu`;
                   </div>
                   <div className="flex items-center gap-2 flex-wrap shrink-0">
                     <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-white text-[#D9532F] border border-[#f1ded7] shadow-2xs">
-                      Oaklin Lane: Chief of Staff in Training
+                      Oaklin Lane: Consulting & Strategy Intern
                     </span>
                     <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#D9532F]/10 text-[#C2410C] border border-[#f1ded7]">
                       TBD Investors: Finance & Strategy
@@ -1333,7 +1344,7 @@ dar159@georgetown.edu`;
           {/* Top CTA Section */}
           <div className="text-center space-y-3">
             <h3 className="text-base sm:text-lg font-bold text-slate-900 font-sans tracking-tight">
-              Ready to Discuss the Chief of Staff or Strategy Roles?
+              Ready to Discuss the Consulting & Strategy or Corporate Finance Roles?
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
               <a
@@ -1382,7 +1393,7 @@ dar159@georgetown.edu`;
                     className="hover:text-[#D9532F] transition-colors cursor-pointer text-left inline-flex items-center gap-1.5 font-medium"
                   >
                     <span className="text-[#D9532F]">•</span>
-                    <span>Chief of Staff Track</span>
+                    <span>Consulting & Strategy Track</span>
                   </button>
                 </li>
                 <li>
@@ -1579,7 +1590,7 @@ dar159@georgetown.edu`;
         onNotify={triggerToast}
       />
 
-      {/* Chief of Staff Strategic AI Assistant with Aurora & Glassmorphism */}
+      {/* Consulting & Strategy AI Assistant with Aurora & Glassmorphism */}
       <CandidateChatAssistant
         isOpen={isChatAssistantOpen}
         onClose={() => setIsChatAssistantOpen(false)}

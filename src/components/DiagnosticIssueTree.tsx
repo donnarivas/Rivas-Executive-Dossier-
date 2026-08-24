@@ -50,85 +50,109 @@ interface TrackData {
 const ISSUE_TREE_DATA: Record<TrackType, TrackData> = {
   oaklin: {
     id: 'oaklin',
-    trackLabel: 'Track A: Chief of Staff in Training',
-    roleTitle: 'Chief of Staff in Training (Oaklin Lane)',
+    trackLabel: 'Track A: Consulting & Strategy Intern',
+    roleTitle: 'Consulting & Strategy Intern (Oaklin Lane)',
     company: 'Oaklin Lane',
-    rootObjective: 'Oaklin Lane Scale & Clinical Quality',
-    rootSubtitle: 'Primary Strategic Objective // Scalable Multi-Site Quality & Clinical Velocity',
-    strategicFocus: 'Harmonizing clinician retention, multi-campus standardization, and zero-defect regulatory governance to support pediatric clinic expansion.',
+    rootObjective: 'Oaklin Lane Consulting Value Creation & Strategic Rigor',
+    rootSubtitle: 'Primary Strategic Objective // Institutional Consulting Rigor, Strategic Synthesis & High-Leverage Deliverables',
+    strategicFocus: 'Driving analytical rigor, synthesizing multi-source qualitative and quantitative data into client-ready deliverables, and structuring operational execution for Oaklin Lane.',
     branches: [
       {
         id: 'oaklin-b1',
         code: 'BRANCH 01',
-        title: 'Talent Operations & Evaluation Rubrics',
-        domain: 'Talent Architecture & Clinician Capacity',
-        description: 'Institutionalizing rigorous clinician screening, accelerated 14-day shadowing workflows, and predictive burnout heatmaps to protect clinic culture and clinical care standards.',
+        title: 'Diagnostic & Quantitative Research',
+        domain: 'Market Mapping, Financial Modeling & Benchmark Analysis',
+        description: 'Conducting rigorous quantitative diagnostics, multi-market geographic sizing, clinic unit economic modeling, and operational benchmark analysis across pediatric therapy platforms.',
         subNodes: [
           {
             id: 'o-b1-s1',
-            title: 'Rubric Architecture',
-            desc: 'Objective multi-stage clinical competency frameworks, cultural alignment scorecards, and pediatric case simulations.',
-            outcome: 'Screening Precision (99.4%)',
-            outcomeMetric: '99.4% Precision',
-            methodology: 'Calibrated behavioral rubrics & objective clinical scenario matrices'
+            title: 'Market Mapping & Geographic Sizing',
+            desc: 'Granular geographic demographic analysis, pediatric provider density mapping, and regional therapy demand estimation.',
+            outcome: 'Market Opportunity Precision',
+            outcomeMetric: '10+ Regional Hubs Mapped',
+            methodology: 'Zip-code level demographic clustering & provider capacity benchmarks'
           },
           {
             id: 'o-b1-s2',
-            title: '14-Day Shadowing Protocol',
-            desc: 'Structured clinical apprenticeship model, paired veteran therapist shadowing, and accelerated Day 1-14 milestone onboarding.',
-            outcome: 'Onboarding Lead Time (-35%)',
-            outcomeMetric: '-35% Lead Time',
-            methodology: 'High-touch mentorship cadences & daily competency sign-offs'
+            title: 'Financial & Unit Economic Modeling',
+            desc: 'Dynamic clinic-level contribution models, therapist caseload utilization curves, and multi-scenario sensitivity analyses.',
+            outcome: 'Contribution Margin Optimization',
+            outcomeMetric: '+450 bps EBITDA Precision',
+            methodology: 'FRL 3000 managerial finance rigor & dynamic sensitivity matrices'
           },
           {
             id: 'o-b1-s3',
-            title: 'Burnout Heatmap Tracker',
-            desc: 'Weekly clinician caseload utilization monitoring, sentiment tripwires, and predictive staff fatigue balancing.',
-            outcome: 'Clinician Retention Target (92%+)',
-            outcomeMetric: '92%+ Retention',
-            methodology: 'Caseload utilization thresholds & automated fatigue early-warning alerts'
+            title: 'Operational Benchmark Analysis',
+            desc: 'Benchmarking clinic throughput, patient intake latency, and clinician onboarding cycles against top-tier institutional standards.',
+            outcome: 'Throughput Gap Identification',
+            outcomeMetric: '-35% Intake Latency',
+            methodology: 'Theory of Constraints (TOC) & multi-clinic baseline audits'
           }
         ]
       },
       {
         id: 'oaklin-b2',
         code: 'BRANCH 02',
-        title: 'Multi-Campus Distribution & Regional Hub Operations',
-        domain: 'Multi-Clinic Distribution & Fleet Logistics',
-        description: 'Optimizing geographic clinic network density, dynamic cross-clinic clinician float pools, and universal clinic playbook execution.',
+        title: 'Strategy & Framework Formulation',
+        domain: 'Gap Analysis, Hypothesis Testing & Actionable Recommendations',
+        description: 'Translating unstructured operational diagnostics into structured MECE problem-solving frameworks, gap analyses, and high-conviction client recommendations.',
         subNodes: [
           {
             id: 'o-b2-s1',
-            title: 'Cross-Clinic Resource Allocation',
-            desc: 'Predictive patient intake mapping with agile clinician cross-site float scheduling to eliminate clinic ramp delays.',
-            outcome: 'Zero Clinical Ramp Drag',
-            outcomeMetric: '0 Ramp Drag',
-            methodology: 'Dynamic patient waitlist triage & cross-campus staff balancing'
+            title: 'Operational Gap Analysis',
+            desc: 'Isolating operational bottlenecks across provider recruitment, clinical onboarding, and payer pre-authorization workflows.',
+            outcome: 'Root-Cause Resolution',
+            outcomeMetric: '100% MECE Isolation',
+            methodology: 'Hypothesis-driven issue trees & Pareto 80/20 root-cause analysis'
           },
           {
             id: 'o-b2-s2',
-            title: 'Regional Standardization SOPs',
-            desc: 'Universal clinical operating playbooks standardizing front-desk intake, billing authorizations, and pediatric therapy workflows.',
-            outcome: 'Consistent Care Benchmarks',
-            outcomeMetric: '100% Quality Fidelity',
-            methodology: 'Peer review audit cycles & centralized digital operating blueprints'
+            title: 'Strategic Recommendation Synthesis',
+            desc: 'Synthesizing complex multi-variable clinical and operational findings into decisive, actionable strategic initiatives.',
+            outcome: 'Executive Decision Readiness',
+            outcomeMetric: 'Zero-Ambiguity Briefs',
+            methodology: 'Georgetown Strategic Management synthesis & executive trade-off matrices'
+          },
+          {
+            id: 'o-b2-s3',
+            title: 'Expansion Prioritization Matrix',
+            desc: 'Evaluating de novo clinic rollouts vs. partner acquisitions across capital requirements, regulatory timelines, and clinical feasibility.',
+            outcome: 'De-risked Growth Sequence',
+            outcomeMetric: 'Optimized Capital Deployment',
+            methodology: 'Multi-criteria decision analysis & strategic scoring rubrics'
           }
         ]
       },
       {
         id: 'oaklin-b3',
         code: 'BRANCH 03',
-        title: 'Scalable Clinic Governance & Regulatory Compliance',
-        domain: 'Regulatory Compliance & Audit Readiness',
-        description: 'De-risking rapid regional expansion via state pediatric therapy licensure matrices, HIPAA compliance guardrails, and Medicaid billing controls.',
+        title: 'Operational Execution & Deliverables',
+        domain: 'Slide Deck Architecture, Stakeholder Reporting & Workstream Execution',
+        description: 'Architecting institutional-grade client slide decks, executive board materials, standardized workflow playbooks, and managing cross-functional workstreams.',
         subNodes: [
           {
             id: 'o-b3-s1',
-            title: 'Pediatric Therapy Compliance Matrices',
-            desc: 'Multi-jurisdiction healthcare licensing matrices, statutory Medicaid compliance checks, and clinical documentation audits.',
-            outcome: '100% Audit Readiness',
-            outcomeMetric: '100% Audit Ready',
-            methodology: 'Pepperdine Caruso Law legal analysis & continuous compliance verification'
+            title: 'Executive Slide Deck Architecture',
+            desc: 'Structuring high-impact visual presentations, storyline pyramids, and client-ready deliverables meeting top-tier McKinsey standards.',
+            outcome: 'Institutional Deliverable Polish',
+            outcomeMetric: '100% Client-Ready',
+            methodology: 'Pyramid Principle storyline structuring & executive visual design'
+          },
+          {
+            id: 'o-b3-s2',
+            title: 'Stakeholder Reporting & WBR Dashboards',
+            desc: 'Designing weekly business review dashboards, KPI reporting packages, and sponsor progress memos for leadership and TBD Investors.',
+            outcome: 'Reporting Cadence Transparency',
+            outcomeMetric: '100% Weekly Cadence',
+            methodology: 'Executive KPI cockpit design & multi-variable data synthesis'
+          },
+          {
+            id: 'o-b3-s3',
+            title: 'Process Workflows & SOP Codification',
+            desc: 'Developing standardized operational playbooks, clinician onboarding SOPs, and reusable consulting toolkits for future intern cohorts.',
+            outcome: 'Institutional Memory & Scale',
+            outcomeMetric: '-25% Onboarding Ramp',
+            methodology: 'Standardized operating protocols & digital knowledge hubs'
           }
         ]
       }
@@ -342,7 +366,7 @@ export const DiagnosticIssueTree: React.FC<DiagnosticIssueTreeProps> = ({
                 </span>
               </div>
               <h4 className="text-xs sm:text-sm font-bold font-sans truncate">
-                Chief of Staff in Training
+                Consulting & Strategy Intern
               </h4>
             </div>
             <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 ${
@@ -633,7 +657,7 @@ export const DiagnosticIssueTree: React.FC<DiagnosticIssueTreeProps> = ({
         <div className="flex items-center gap-2">
           <span className="text-[10px] uppercase font-bold text-slate-400">Target Alignment:</span>
           <span className="text-[#D9532F] font-bold">
-            {activeTrack === 'oaklin' ? 'Oaklin Lane (Chief of Staff)' : 'TBD Investors (Corporate Finance)'}
+            {activeTrack === 'oaklin' ? 'Oaklin Lane (Consulting & Strategy Intern)' : 'TBD Investors (Corporate Finance)'}
           </span>
         </div>
       </div>

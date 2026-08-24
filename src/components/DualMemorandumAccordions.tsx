@@ -113,14 +113,14 @@ export const DualMemorandumAccordions: React.FC<DualMemorandumAccordionsProps> =
             <div className="space-y-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#D9532F]">
-                  MEMORANDUM 01 // OAKLIN LANE: CHIEF OF STAFF IN TRAINING APPLICATION
+                  MEMORANDUM 01 // OAKLIN LANE: CONSULTING & STRATEGY INTERN BRIEF
                 </span>
                 <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-[#D9532F]/10 text-[#C2410C] border border-[#f1ded7]">
-                  Pediatric Healthcare Operations · Executive Leverage
+                  Analytical Rigor · Structured Synthesis · Client-Ready Deliverables
                 </span>
               </div>
               <p className="text-xs text-stone-600 font-sans truncate">
-                Official Submission Statement for Chris Callander & Selection Committee
+                Strategic Consulting Brief for Chris Callander & Selection Committee
               </p>
             </div>
           </div>
@@ -141,66 +141,66 @@ export const DualMemorandumAccordions: React.FC<DualMemorandumAccordionsProps> =
             {/* Memo Body Content */}
             <div className="space-y-5">
               <h2 className="text-lg sm:text-xl font-serif font-bold text-stone-900 tracking-tight">
-                Dear Chris and the TBD Investors Selection Committee,
+                Dear Chris and the Oaklin Lane Selection Committee,
               </h2>
 
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                I am writing to enthusiastically submit my application for the <strong>Chief of Staff in Training / Strategy & Operations</strong> position with <strong>Oaklin Lane</strong>. Having followed the rapid evolution of pediatric therapy platforms backed by institutional growth investors, I recognize that scaling a multi-site clinic model requires far more than operational diligence—it requires an executive office capable of converting strategic vision into relentless on-the-ground operational velocity while uncompromisingly safeguarding clinical quality.
+                I am writing to enthusiastically submit my candidate brief for the <strong>Consulting & Strategy Intern</strong> position with <strong>Oaklin Lane</strong>. Having analyzed the growth dynamics of pediatric therapy platforms backed by institutional search-fund sponsors, I recognize that scaling a multi-site clinical network requires rigorous consulting craftsmanship—uncovering granular operational truths, structuring unstructured qualitative and quantitative findings into MECE frameworks, and converting strategic hypotheses into client-ready, high-conviction deliverables.
               </p>
 
               {/* Foundational Preparation & Academic Rigor */}
               <div className="p-6 bg-[#D9532F]/8 backdrop-blur-md border border-[#f1ded7] rounded-2xl space-y-2">
                 <div className="flex items-center justify-between flex-wrap gap-2">
                   <span className="text-[10px] tracking-wider text-stone-600 font-bold uppercase font-mono">
-                    FOUNDATIONAL PREPARATION & ACADEMIC RIGOR
+                    FOUNDATIONAL PREPARATION & CONSULTING TOOLKIT
                   </span>
                   <span className="text-[10px] font-mono font-semibold text-[#D9532F] bg-white/80 px-2.5 py-0.5 rounded-full border border-[#f1ded7]">
                     LEGAL + STRATEGIC + FINANCIAL SYNTHESIS
                   </span>
                 </div>
                 <p className="text-stone-800 leading-relaxed font-sans text-xs sm:text-sm">
-                  Having honed rigorous legal analysis and statutory problem-solving at <strong>Pepperdine University Caruso School of Law</strong>, paired with executive strategic intelligence from my Professional Certificate in Strategic Management at <strong>Georgetown University</strong>, advanced management consulting at <strong>Harvard Extension School</strong>, and managerial finance from <strong>Cal Poly Pomona</strong> (BSBA, 4.0 GPA), I have intentionally engineered a toolkit purpose-built for high-growth executive leverage.
+                  Combining statutory analysis and regulatory diligence from <strong>Pepperdine University Caruso School of Law</strong> with advanced executive strategy from my Professional Certificate at <strong>Georgetown University</strong>, management consulting frameworks from <strong>Harvard Extension School</strong>, and managerial finance from <strong>Cal Poly Pomona</strong> (BSBA, 4.0 GPA), I have forged an analytical toolkit engineered specifically for top-tier consulting execution.
                 </p>
               </div>
 
               {/* Three Strategic Pillars */}
               <div className="space-y-2 pt-1">
                 <p className="font-bold text-stone-900 text-xs sm:text-sm">
-                  Three specific strategic pillars compel my deep dedication to Oaklin Lane:
+                  Three core consulting pillars define my strategic value proposition for Oaklin Lane:
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
                   <div className="p-6 bg-white border border-[#f1ded7] rounded-2xl space-y-2 shadow-2xs hover:border-[#D9532F]/40 transition-colors">
                     <span className="text-[10px] tracking-wider text-[#D9532F] font-bold uppercase font-mono block">
-                      1. MULTI-SITE PEDIATRIC OPERATIONAL VELOCITY
+                      1. DIAGNOSTIC & QUANTITATIVE RESEARCH
                     </span>
                     <p className="text-stone-700 text-xs leading-relaxed">
-                      Expanding access to Speech, Occupational, and Physical therapy for children with neurodevelopmental and motor challenges changes family trajectories for generations. Early intervention is paramount, and every operational bottleneck resolved directly expands patient care capacity.
+                      Executing granular market mapping, provider density demographic evaluations, and clinic unit economic modeling. I rapidly ingest disaggregated operational and clinical data to establish clear baseline benchmarks across regional hubs.
                     </p>
                   </div>
 
                   <div className="p-6 bg-white border border-[#f1ded7] rounded-2xl space-y-2 shadow-2xs hover:border-[#D9532F]/40 transition-colors">
                     <span className="text-[10px] tracking-wider text-[#D9532F] font-bold uppercase font-mono block">
-                      2. DIRECT EXECUTIVE FORCE MULTIPLIER
+                      2. STRATEGY & FRAMEWORK FORMULATION
                     </span>
                     <p className="text-stone-700 text-xs leading-relaxed">
-                      As Chief of Staff in Training, my objective is to amplify your bandwidth by taking total ownership of cross-functional strategic initiatives—from building clinic opening playbooks and standardizing therapist onboarding, to architecting board-level KPI operating reviews.
+                      Translating complex operational findings into structured MECE problem-solving frameworks, gap analyses, and prioritized strategic initiatives that provide executive decision-makers with crisp, data-backed clarity.
                     </p>
                   </div>
 
                   <div className="p-6 bg-white border border-[#f1ded7] rounded-2xl space-y-2 shadow-2xs hover:border-[#D9532F]/40 transition-colors">
                     <span className="text-[10px] tracking-wider text-[#D9532F] font-bold uppercase font-mono block">
-                      3. DATA-DRIVEN FINANCIAL & REGULATORY RIGOR
+                      3. OPERATIONAL EXECUTION & DELIVERABLES
                     </span>
                     <p className="text-stone-700 text-xs leading-relaxed">
-                      My background combining legal analysis from Pepperdine Caruso Law with quantitative financial modeling and commercial operations ensures that strategic recommendations are legally compliant, financially viable, and operationally executable.
+                      Architecting institutional-quality slide decks (Pyramid Principle), executive memorandums, weekly business review cockpits, and codified playbooks that streamline workstreams and elevate deliverable standards across all engagements.
                     </p>
                   </div>
                 </div>
               </div>
 
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed pt-2">
-                I am prepared to immediately dedicate my analytical rigor, disciplined work ethic, and executive presence to ensure Oaklin Lane exceeds its expansion targets and delivers gold-standard care across every community it enters.
+                I am prepared to immediately dedicate my analytical rigor, disciplined research methodology, and client-ready deliverable polish to support Oaklin Lane's strategic growth mandates and ensure every deliverable reflects top-tier management consulting excellence.
               </p>
 
               {/* Closing & Signature */}
@@ -208,13 +208,13 @@ export const DualMemorandumAccordions: React.FC<DualMemorandumAccordionsProps> =
                 <div className="space-y-0.5">
                   <p className="text-stone-500 text-xs font-mono">Sincerely,</p>
                   <p className="text-base font-bold text-stone-900 font-serif">Donna Aseret Rivas</p>
-                  <p className="text-[#D9532F] text-xs font-semibold">Candidate for Chief of Staff in Training · Strategic Operations</p>
+                  <p className="text-[#D9532F] text-xs font-semibold">Candidate for Consulting & Strategy Intern · Oaklin Lane</p>
                   <p className="text-stone-500 text-xs font-mono">{candidateEmail} • (424) 478-1969</p>
                 </div>
 
                 <div className="flex items-center gap-2.5 flex-wrap">
                   <a
-                    href={`mailto:${candidateEmail}?subject=Oaklin%20Lane%20Chief%20of%20Staff%20Conversation%20-%20Donna%20Rivas`}
+                    href={`mailto:${candidateEmail}?subject=Oaklin%20Lane%20Consulting%20%26%20Strategy%20Conversation%20-%20Donna%20Rivas`}
                     className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#D9532F] hover:bg-[#b83d1c] text-white font-mono font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm cursor-pointer border border-[#D9532F]/40"
                   >
                     <Send className="w-3.5 h-3.5" />

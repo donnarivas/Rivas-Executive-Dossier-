@@ -281,7 +281,7 @@ export const ExpansionCalculator: React.FC = () => {
             <div className="bg-slate-50 p-4 border border-slate-200 text-xs text-slate-700 leading-relaxed flex items-start gap-2.5">
               <Sparkles className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
               <div>
-                <strong className="text-slate-900 uppercase tracking-wider text-[11px] block mb-0.5">Chief of Staff Operational Oversight:</strong> 
+                <strong className="text-slate-900 uppercase tracking-wider text-[11px] block mb-0.5">Consulting & Strategy Operational Oversight:</strong> 
                 As Oaklin Lane opens new locations, Donna will maintain live clinic economics models, track clinician ramp curves, and pinpoint regional referral bottlenecks to protect contribution margins as care expands.
               </div>
             </div>

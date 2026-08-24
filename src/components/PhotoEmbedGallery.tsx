@@ -1261,7 +1261,7 @@ export const PhotoEmbedGallery: React.FC<PhotoEmbedGalleryProps> = ({ onNotify }
                   value={docCaption}
                   onChange={(e) => setDocCaption(e.target.value)}
                   rows={2}
-                  placeholder="Key competencies proven, strategic relevance to Oaklin Lane Chief of Staff role..."
+                  placeholder="Key competencies proven, strategic relevance to Oaklin Lane Consulting & Strategy role..."
                   className="w-full bg-white/80 border border-slate-200 rounded-xl p-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-hidden focus:border-[#D9532F] shadow-xs"
                 />
               </div>

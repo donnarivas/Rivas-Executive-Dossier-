@@ -43,33 +43,33 @@ interface ExecutiveInviteModalProps {
 export const EMAIL_RECIPIENT = 'dar159@georgetown.edu';
 
 export const TRACK_OPTIONS = [
-  'Dual Track: Chief of Staff & Corporate Finance/Strategy',
-  'Chief of Staff in Training (Oaklin Lane)',
+  'Dual Track: Consulting & Strategy & Corporate Finance',
+  'Consulting & Strategy Intern (Oaklin Lane)',
   'Corporate Finance & Strategy Intern (TBD Investors)',
   'Custom / Other Strategic Role'
 ] as const;
 
-export const DEFAULT_TRACK = 'Dual Track: Chief of Staff & Corporate Finance/Strategy';
+export const DEFAULT_TRACK = 'Dual Track: Consulting & Strategy & Corporate Finance';
 
 export const getSubjectForTrack = (track: string) => {
-  if (track === 'Dual Track: Chief of Staff & Corporate Finance/Strategy') {
+  if (track === 'Dual Track: Consulting & Strategy & Corporate Finance') {
     return 'Executive Interview Invitation / Strategic Onboarding — Donna Aseret Rivas';
   }
   return `Executive Interview Invitation / Strategic Onboarding [${track}] — Donna Aseret Rivas`;
 };
 
 export const getBodyForTrack = (track: string) => {
-  let trackPhrase = 'the Chief of Staff in Training & Corporate Finance/Strategy track';
+  let trackPhrase = 'the Consulting & Strategy & Corporate Finance track';
   let orgStakeholder = 'Oaklin Lane / TBD Investors';
   
-  if (track === 'Chief of Staff in Training (Oaklin Lane)') {
-    trackPhrase = 'the Chief of Staff in Training track';
+  if (track === 'Consulting & Strategy Intern (Oaklin Lane)') {
+    trackPhrase = 'the Consulting & Strategy Intern track';
     orgStakeholder = 'Oaklin Lane';
   } else if (track === 'Corporate Finance & Strategy Intern (TBD Investors)') {
     trackPhrase = 'the Corporate Finance & Strategy Intern track';
     orgStakeholder = 'TBD Investors';
-  } else if (track === 'Dual Track: Chief of Staff & Corporate Finance/Strategy') {
-    trackPhrase = 'the Chief of Staff in Training & Corporate Finance/Strategy track';
+  } else if (track === 'Dual Track: Consulting & Strategy & Corporate Finance') {
+    trackPhrase = 'the Consulting & Strategy & Corporate Finance track';
     orgStakeholder = 'Oaklin Lane / TBD Investors';
   } else {
     trackPhrase = track && track !== 'Custom / Other Strategic Role' ? `the ${track} track` : 'the strategic executive track';
@@ -190,7 +190,7 @@ export const ExecutiveInviteModal: React.FC<ExecutiveInviteModalProps> = ({
     const senderOrgVal = (document.getElementById('sender-org-input') as HTMLInputElement)?.value || senderOrg || 'Not provided';
     const currentSubject = (document.getElementById('subject-input') as HTMLInputElement)?.value || subject || 'Executive Interview Invitation — Donna Aseret Rivas';
     const currentBody = (document.getElementById('message-textarea') as HTMLTextAreaElement)?.value || bodyText || '';
-    const currentTrack = (document.getElementById('track-select') as HTMLSelectElement)?.value || currentTrackValue || 'Chief of Staff / Strategy';
+    const currentTrack = (document.getElementById('track-select') as HTMLSelectElement)?.value || currentTrackValue || 'Consulting & Strategy';
 
     // 2. Validation
     if (!senderEmailVal.trim() || !senderEmailVal.includes('@')) {
@@ -400,11 +400,11 @@ export const ExecutiveInviteModal: React.FC<ExecutiveInviteModalProps> = ({
                   className="w-full px-3 py-2.5 rounded-xl border border-stone-300 bg-white/95 backdrop-blur-xs text-stone-900 font-sans text-xs focus:outline-none focus:ring-2 focus:ring-[#d65528]/40 focus:border-[#d65528] transition-all shadow-2xs cursor-pointer font-semibold"
                   style={{ fontSize: '0.85rem', fontWeight: 600 }}
                 >
-                  <option value="Dual Track: Chief of Staff & Corporate Finance/Strategy">
-                    Dual Track: Chief of Staff &amp; Corporate Finance/Strategy
+                  <option value="Dual Track: Consulting & Strategy & Corporate Finance">
+                    Dual Track: Consulting & Strategy &amp; Corporate Finance
                   </option>
-                  <option value="Chief of Staff in Training (Oaklin Lane)">
-                    Chief of Staff in Training (Oaklin Lane)
+                  <option value="Consulting & Strategy Intern (Oaklin Lane)">
+                    Consulting & Strategy Intern (Oaklin Lane)
                   </option>
                   <option value="Corporate Finance & Strategy Intern (TBD Investors)">
                     Corporate Finance &amp; Strategy Intern (TBD Investors)

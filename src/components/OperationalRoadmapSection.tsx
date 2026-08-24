@@ -26,46 +26,46 @@ export const OAKLIN_ROADMAP_SPRINTS: SprintPhase[] = [
     tabLabel: "Sprint 01: Days 01–30",
     daysRange: "Days 01–30",
     sprintNum: "Sprint 01",
-    title: "Listen, Learn & Build Executive Alignment",
-    focus: "Discovery, Patient Lifecycles & Sponsor Rhythm",
-    summary: "Shadow CEO Chris Callander across all operational, financial, and clinical touchpoints. Map clinic-level workflows, understand therapist pain points, and build strong trust with key clinic directors.",
+    title: "Absorb & Structure",
+    focus: "Diagnostic, Research Frameworks & Cadence Setup",
+    summary: "Audit Oaklin Lane project archives, master internal research frameworks, establish rigorous communication cadences with engagement leads, and support ongoing qualitative/quantitative data gathering across active engagements.",
     deliverables: [
-      "Conduct 1-on-1 discovery interviews with Clinic Directors, Lead Therapists, and Intake staff",
-      "Shadow 5+ patient intake-to-first-session lifecycles to identify clinical workflow friction",
-      "Audit current Weekly Business Review (WBR) metrics and clinical KPI operating cadences",
-      "Establish immediate executive communication rhythm with Chris Callander (Daily async standup / Weekly prioritization memo)"
+      "Audit Oaklin Lane project archives, engagement deliverables, and operational benchmarks across clinic locations",
+      "Master internal research frameworks and synthesize baseline metrics for ongoing clinical workstreams",
+      "Establish daily/weekly operating cadence with engagement leads and CEO Chris Callander",
+      "Support quantitative data gathering across clinic intake funnels, clinician utilization, and partner referral dynamics"
     ],
-    executiveLeverage: "Immediately absorbs meeting synthesis and task triage, freeing 6–8 hrs/week of CEO cognitive load."
+    executiveLeverage: "Accelerates onboarding velocity and structures project archives, saving 8–10 hours/week of senior team time."
   },
   {
     tabLabel: "Sprint 02: Days 31–60",
     daysRange: "Days 31–60",
     sprintNum: "Sprint 02",
-    title: "Standardize Clinic Openings & Therapist Onboarding",
-    focus: "De Novo Playbooks, Capacity Utilization & Governance",
-    summary: "Transition from observation to active operational codification. Architect repeatable clinic opening checklists, optimize clinician onboarding, and institute cross-functional weekly operating reviews.",
+    title: "Analyze & Synthesize",
+    focus: "Analytical Modeling, Slide Decks & Gap Analysis",
+    summary: "Build independent analytical models, draft structured slides and executive memos for active client engagements, and identify operational bottlenecks to formulate high-impact strategic recommendations.",
     deliverables: [
-      "Architect the standard \"De Novo Clinic Opening Playbook\" across real estate, licensing, and therapist hiring",
-      "Streamline clinician onboarding pipelines to reduce time-to-first-billable session by 20%",
-      "Build cross-functional operational dashboards tracking site-level utilization and patient retention",
-      "Lead weekly cross-functional operating reviews across speech, occupational, and physical therapy leads"
+      "Build independent financial and operational models assessing clinic unit economics and capacity utilization",
+      "Draft structured, client-ready slide decks and strategic memorandums for active leadership and sponsor reviews",
+      "Identify operational and administrative bottlenecks across clinic onboarding and patient intake workflows",
+      "Synthesize multi-variable research into structured MECE problem-solving frameworks and decision briefs"
     ],
-    executiveLeverage: "Drives operational velocity across locations while safeguarding clinical quality standards."
+    executiveLeverage: "Translates complex datasets into executive-ready deliverables with institutional consulting rigor."
   },
   {
     tabLabel: "Sprint 03: Days 61–90",
     daysRange: "Days 61–90",
     sprintNum: "Sprint 03",
-    title: "Scale Multi-Site Expansion & Board Governance",
-    focus: "Regional Expansion, Capacity Forecasting & Sponsor Decks",
-    summary: "Drive multi-site regional scaling velocity, design automated clinician capacity modeling tools, and formalize board-ready reporting packages for institutional investors.",
+    title: "Own & Deliver",
+    focus: "Workstream Modules, Client Presentations & Consulting Toolkits",
+    summary: "Lead discrete workstream modules with complete analytical ownership, deliver polished client-ready presentations, and codify reusable consulting toolkits and playbooks for future intern cohorts.",
     deliverables: [
-      "Own end-to-end execution of new regional clinic launches and commercial partnerships",
-      "Formalize board-level reporting packages and lender presentation decks for institutional sponsors",
-      "Design automated capacity modeling tools to forecast clinic staffing needs against patient waitlists",
-      "Transition from reactive problem-solving to proactive strategic growth initiatives across target regions"
+      "Lead discrete strategic workstream modules with end-to-end analytical autonomy and quality control",
+      "Deliver polished, client-ready presentations and executive reporting packages for Oaklin Lane and TBD Investors",
+      "Codify reusable consulting toolkits, standard operating procedures, and onboarding playbooks for future intern cohorts",
+      "Formalize quarterly strategic review deck and 12-month national growth roadmap recommendations"
     ],
-    executiveLeverage: "Fully operationalizes the executive office as an autonomous growth engine."
+    executiveLeverage: "Establishes institutional consulting toolkits and autonomously drives core deliverables to completion."
   }
 ];
 
@@ -154,7 +154,7 @@ export const OperationalRoadmapSection: React.FC = () => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
         
         {/* ============================================================ */}
-        {/* CARD 1: OAKLIN LANE // CHIEF OF STAFF IN TRAINING            */}
+        {/* CARD 1: OAKLIN LANE // CONSULTING & STRATEGY INTERN          */}
         {/* ============================================================ */}
         <div className="rounded-2xl border-[1.5px] border-[#f1ded7] bg-gradient-to-b from-white via-orange-50/15 to-white backdrop-blur-xl p-6 shadow-sm space-y-5 flex flex-col justify-between">
           
@@ -167,20 +167,20 @@ export const OperationalRoadmapSection: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#D9532F] block">
-                    OAKLIN LANE EXECUTION BLUEPRINT
+                    OAKLIN LANE STRATEGIC DELIVERABLES
                   </span>
                   <h4 className="text-sm sm:text-base font-bold text-stone-900 font-mono">
-                    OAKLIN LANE // PEDIATRIC PLATFORM OPERATIONS
+                    OAKLIN LANE // CONSULTING & STRATEGY
                   </h4>
                 </div>
               </div>
               <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-[#D9532F]/10 text-[#C2410C] border border-[#f1ded7] w-fit max-w-full whitespace-normal leading-[1.4] break-words shrink-0">
-                Chief of Staff in Training
+                Consulting & Strategy Intern
               </span>
             </div>
             
             <p className="text-xs text-stone-600 font-sans leading-relaxed">
-              Direct Executive Force Multiplier for CEO Chris Callander (Ex-McKinsey / HBS / Georgetown) · Multi-Site Pediatric Clinic Expansion
+              Analytical Rigor & Client-Ready Deliverables for CEO Chris Callander (Ex-McKinsey / HBS / Georgetown) · Multi-Site Pediatric Clinic Expansion
             </p>
           </div>
 

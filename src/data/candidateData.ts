@@ -9,7 +9,7 @@ import {
 export const CANDIDATE_PROFILE = {
   fullName: 'Donna Aseret Rivas',
   preferredName: 'Donna Rivas',
-  targetRole: 'Chief of Staff in Training / Strategy & Operations Intern',
+  targetRole: 'Consulting & Strategy Intern',
   company: 'Oaklin Lane (TBD Investors Portfolio)',
   ceoName: 'Chris Callander',
   email: 'internship@tbdinvestors.com',
@@ -17,7 +17,7 @@ export const CANDIDATE_PROFILE = {
   location: 'Remote',
   committeeTarget: 'TBD Investors & Oaklin Lane Hiring Committee',
   headline: 'Strategic Management (Georgetown SCS) • Harvard Extension • Managerial Finance & B2B Operations (Cal Poly Pomona)',
-  summary: 'A disciplined, analytical, and high-tenacity professional with specialized academic training in Strategic Management from Georgetown University, coursework in international business and communication from Harvard Extension School, and rigorous foundations in managerial finance and B2B sales operations from Cal Poly Pomona. Uniquely positioned to serve as a high-leverage Chief of Staff in Training to CEO Chris Callander in scaling Oaklin Lane into a national leader in pediatric therapy.',
+  summary: 'A disciplined, analytical, and high-tenacity professional with specialized academic training in Strategic Management from Georgetown University, coursework in international business and communication from Harvard Extension School, and rigorous foundations in managerial finance and B2B sales operations from Cal Poly Pomona. Uniquely positioned to serve as a high-leverage Consulting & Strategy Intern to CEO Chris Callander and engagement leads in scaling Oaklin Lane into a national leader in pediatric therapy.',
   coreCompetencies: [
     { name: 'Strategic Foresight & Corporate Structure', level: 95, category: 'Strategy' },
     { name: 'Data Synthesis & Business Intelligence', level: 94, category: 'Analytics' },
@@ -84,8 +84,8 @@ export const HIRING_COMMITTEE_KEY_EXPERIENCES: HiringCommitteePoint[] = [
     category: 'Executive Bandwidth Multiplier',
     candidateExperience: 'Demonstrated real-world frontline commercial tenacity and project ownership under intense pressure (Sierra Chevrolet, Daniel’s Jewelers, rigorous academic client projects).',
     academicOrRealWorldSource: 'Faculty Endorsements (Dr. Megan Good & Dr. John Corso)',
-    directContributionToCEO: 'Operates as an autonomous "Chief of Staff in training" who proactively identifies operational bottlenecks, manages cross-functional workstreams (recruiting, clinical directors, ops), and executes high-urgency special initiatives without requiring step-by-step supervision.',
-    measurableImpact: 'Directly frees 15+ hours/week of CEO bandwidth to focus on macro capital allocation, key hires, and strategic M&A.',
+    directContributionToCEO: 'Operates as an autonomous consulting and strategy operator who proactively identifies operational bottlenecks, manages cross-functional workstreams (recruiting, clinical directors, ops), and executes high-urgency strategic deliverables without requiring step-by-step supervision.',
+    measurableImpact: 'Directly frees 15+ hours/week of leadership bandwidth to focus on macro capital allocation, key hires, and strategic M&A.',
     endorsementCitation: 'Dr. Good: "supervized a rigorous real-world project and was impressed with her tenacity and ability to perform and communicate under pressure... unsupervised problem-solving were premium tools honed."'
   },
   {
@@ -282,7 +282,7 @@ Based on her outstanding performance in our program, I would strongly recommend 
 Gary Steinberg, Adjunct Professor, Georgetown University (gas34@georgetown.edu)`,
     skillsHighlighted: ['Analytical Precision', 'Strategic Foresight', 'Operational Excellence', 'Data Synthesis', 'Executive Decision Support'],
     signatoryTitle: 'Adjunct Professor, Georgetown University',
-    relevanceToRole: 'Directly validates the exact Chief of Staff skill set: evaluating organizational structures, synthesizing raw data into executive intelligence, and supporting leadership priorities.'
+    relevanceToRole: 'Directly validates the exact Consulting & Strategy skill set: evaluating organizational structures, synthesizing raw data into executive intelligence, and supporting leadership priorities.'
   },
   {
     id: 'georgetown-corso',
@@ -449,7 +449,7 @@ export const STRATEGIC_ALIGNMENT_PILLARS: StrategicPillar[] = [
   },
   {
     id: 'consulting-rigor',
-    pillarTitle: 'McKinsey Rigor Meets High-Leverage Chief of Staff Execution',
+    pillarTitle: 'McKinsey Rigor Meets High-Leverage Strategic Consulting & Execution',
     iconName: 'TrendingUp',
     chrisBackground: 'Former McKinsey & Company consultant with structured problem-solving and top-tier strategy toolkit.',
     donnaCapability: 'Trained in synthesizing unstructured business problems, American Express Capstone analysis, and translating high-level datasets into actionable intelligence.',
@@ -479,72 +479,72 @@ export const STRATEGIC_ALIGNMENT_PILLARS: StrategicPillar[] = [
 export const CHIEF_OF_STAFF_ROADMAP: RoadmapMilestone[] = [
   {
     phase: 'Phase 1: Days 1–30',
-    timeframe: 'Foundation & Operational Immersion',
-    focusArea: 'Diagnostic, Clinic Cadence & CEO Shadowing',
+    timeframe: 'Absorb & Structure',
+    focusArea: 'Diagnostic & Quantitative Immersion',
     initiatives: [
-      'Audit existing clinic intake workflows, therapist utilization rates, and parent onboarding bottlenecks.',
-      'Establish Chris Callander’s weekly executive rhythm: Weekly Business Review (WBR) dashboard, strategic priority tracker, and action item accountability.',
-      'Synthesize customer/therapist feedback to map regional pediatric therapy access gaps and local referral dynamics.'
+      'Audit Oaklin Lane project archives, past deliverables, and existing operational benchmarks across regional clinic footprints.',
+      'Master internal research frameworks, engagement metrics, and establish structured communication cadences with engagement leads and CEO Chris Callander.',
+      'Support ongoing qualitative and quantitative data gathering across clinic intake funnels, clinician utilization, and partner referral channels.'
     ],
     deliverables: [
-      'Comprehensive Clinic Operations Diagnostic & KPI Baseline Report',
-      'CEO Strategic Priority & Action Tracking Notion/Sheet Hub',
-      'Initial B2B Referral Funnel Map (Pediatricians, Schools, Clinics)'
+      'Comprehensive Engagement Archive & Operational Diagnostic Baseline',
+      'Research Framework Mastery & KPI Tracking Matrix',
+      'Initial Quantitative Intake & Referral Analysis Brief'
     ],
-    kpis: ['100% executive meeting action tracking', 'Clinic workflow audit completed across all active sites', 'Zero drop in CEO bandwidth']
+    kpis: ['100% project archive audit completed', 'Cadence established with engagement leads', 'Initial baseline data synthesized without friction']
   },
   {
     phase: 'Phase 2: Days 31–60',
-    timeframe: 'Scaling & Strategic Execution',
-    focusArea: 'Unit Economics Optimization & Expansion Playbook',
+    timeframe: 'Analyze & Synthesize',
+    focusArea: 'Independent Modeling & Strategic Formulation',
     initiatives: [
-      'Build dynamic financial models assessing clinic-level contribution margins, therapist caseload optimization, and insurance reimbursement cycles.',
-      'Develop standardized New Clinic Launch Playbook to accelerate regional expansion without sacrificing care quality.',
-      'Coordinate cross-functional workstreams between recruiting, clinical directors, marketing, and TBD Investors reporting.'
+      'Build independent analytical models assessing clinic-level unit economics, capacity utilization, and geographic market viability.',
+      'Draft structured slide decks and executive memorandums for active client engagements and sponsor review cycles.',
+      'Identify process bottlenecks in clinic expansion workflows and formulate actionable hypothesis-driven recommendations.'
     ],
     deliverables: [
-      'Oaklin Lane Clinic Expansion Unit Economics Calculator',
-      'Standard Operating Procedure (SOP) Playbook for New Clinic Onboarding',
-      'Monthly TBD Investors Portfolio Update & Board Deck prep support'
+      'Independent Unit Economic & Sensitivity Financial Model',
+      'Client-Ready Strategic Engagement Slide Deck & Executive Brief',
+      'Operational Bottleneck & Gap Analysis Action Matrix'
     ],
-    kpis: ['15-20% projected reduction in new clinic setup cycle time', 'Automated financial & utilization dashboard live']
+    kpis: ['Independent financial models validated', '15–20% cycle time reduction in slide deck delivery', 'Actionable client recommendations formalized']
   },
   {
     phase: 'Phase 3: Days 61–90',
-    timeframe: 'Autonomous Leadership & Growth Engines',
-    focusArea: 'Special Initiatives, Strategic Partnerships & National Scale',
+    timeframe: 'Own & Deliver',
+    focusArea: 'Discrete Workstream Ownership & Reusable Toolkits',
     initiatives: [
-      'Own end-to-end execution of a strategic growth sprint (e.g. specialized telehealth hybrid launch or regional pediatric hospital affiliation).',
-      'Drive B2B outreach campaign to local school districts and healthcare networks to establish recurring referral pipelines.',
-      'Proactively identify operational friction points and deliver unsupervised solutions to keep executive bandwidth focused on macro M&A / capital allocation.'
+      'Lead discrete workstream modules with full end-to-end analytical autonomy and rigorous quality control.',
+      'Deliver polished, client-ready presentations and executive reporting packages for Oaklin Lane leadership and TBD Investors.',
+      'Codify reusable consulting toolkits, standard operating frameworks, and onboarding blueprints for future intern cohorts.'
     ],
     deliverables: [
-      'B2B Pediatric Partner Acquisition Engine & Outreach Playbook',
-      'Quarterly Strategic Review & 12-Month National Growth Roadmap',
-      'Therapist Retention & Productivity Program Framework'
+      'Autonomous Strategic Workstream Package & Client Presentation',
+      'Reusable Consulting Toolkit & Engagement Playbook Hub',
+      'Quarterly Strategic Review & 12-Month Platform Roadmap'
     ],
-    kpis: ['New referral channels validated', 'Demonstrated unsupervised project delivery directly relieving CEO load']
+    kpis: ['Full workstream module ownership delivered', 'Consulting toolkit codified for future cohorts', 'Zero-defect client-ready presentations']
   }
 ];
 
 export const SAMPLE_LETTERS = {
   executive: {
-    subject: 'Application: Chief of Staff in Training (Oaklin Lane) — Donna Rivas',
+    subject: 'Application: Consulting & Strategy Intern (Oaklin Lane) — Donna Rivas',
     body: `Dear Chris Callander and the TBD Investors Hiring Committee,
 
-I am writing to submit my application for the Chief of Staff in Training / Strategy & Operations role at Oaklin Lane, as invited following my application with TBD Investors.
+I am writing to submit my application for the Consulting & Strategy Intern role at Oaklin Lane, as invited following my application with TBD Investors.
 
 Genuine Commitment to Oaklin Lane's Mission:
-My enthusiasm for Oaklin Lane is rooted in a core conviction: that early, high-quality pediatric intervention can permanently alter a child's developmental trajectory and unlock lifelong opportunity for families. In an increasingly fragmented healthcare landscape, millions of children face debilitating waitlists or geographic barriers to essential speech, occupational, and physical therapies. My personal career ambition has always been to apply rigorous strategic thinking and financial discipline not merely for commercial growth, but to solve high-stakes societal bottlenecks. Scaling Oaklin Lane’s clinic footprint means directly expanding care capacity for underserved communities—ensuring that every child, regardless of zip code, receives compassionate, world-class clinical support. Building this national platform alongside Chris Callander and TBD Investors represents the ideal alignment of my operational drive, strategic training, and deep-seated commitment to human-centered impact.
+My enthusiasm for Oaklin Lane is rooted in a core conviction: that early, high-quality pediatric intervention can permanently alter a child's developmental trajectory and unlock lifelong opportunity for families. In an increasingly fragmented healthcare landscape, millions of children face debilitating waitlists or geographic barriers to essential speech, occupational, and physical therapies. My personal career ambition has always been to apply rigorous strategic thinking and financial discipline not merely for commercial growth, but to solve high-stakes societal bottlenecks. Scaling Oaklin Lane’s clinic footprint means directly expanding care capacity for underserved communities—ensuring that every child, regardless of zip code, receives compassionate, world-class clinical support. Building this national platform alongside Chris Callander and TBD Investors represents the ideal alignment of my analytical drive, strategic training, and deep-seated commitment to human-centered impact.
 
-Direct Executive Contributions from Day One:
-1. Strategic Thinking & Executive Decision Support: Having earned my Certificate in Strategic Management at Georgetown University SCS, I was trained in evaluating corporate structures, strategic foresight, and distilling multi-variable datasets into actionable business intelligence (endorsed by Prof. Gary Steinberg and Dr. John Corso for the American Express capstone). I will structure Chris's executive decision memos, Board reviews, and growth tradeoffs.
-2. Managerial Finance & Operational Clinic Economics: Through Managerial Finance (FRL 3000, Dr. Paul Sarmas at Cal Poly Pomona), I model clinic contribution margins, therapist utilization sensitivity, and lease amortization curves to ensure profitable clinic expansion.
-3. B2B Commercial Execution & Referral Channel Strategy: Trained in B2B Strategic Selling (Dr. Megan Good) and tested in commercial sales operations (Sierra Chevrolet, Daniel's Jewelers), I will spearhead partner acquisition across pediatric primary care clinics, developmental specialists, and school districts to build predictable patient pipelines.
-4. Unsupervised Execution & Bandwidth Multiplier: Dr. Megan Good validated my "tenacity and ability to perform and communicate under pressure" and mastery of "unsupervised problem-solving." I will autonomously drive cross-functional operational workstreams and eliminate executive bottlenecks.
-5. Shared Institutional Standards & Discretion: My coursework at Georgetown and Harvard Extension School instills the analytical precision, active listening, and high-trust discretion expected in top-tier management consultancy (noted by Harvard Senior Lecturer Anne Taieb).
+Strategic & Consulting Contributions from Day One:
+1. Structured Problem-Solving & Strategic Intelligence: Having earned my Certificate in Strategic Management at Georgetown University SCS, I was trained in evaluating corporate structures, strategic foresight, and distilling multi-variable datasets into actionable business intelligence (endorsed by Prof. Gary Steinberg and Dr. John Corso for the American Express capstone). I will structure executive decision memos, Board reviews, and client-ready strategic briefings.
+2. Managerial Finance & Quantitative Modeling: Through Managerial Finance (FRL 3000, Dr. Paul Sarmas at Cal Poly Pomona), I model clinic contribution margins, therapist utilization sensitivity, and lease amortization curves to ensure profitable clinic expansion.
+3. B2B Commercial Strategy & Referral Execution: Trained in B2B Strategic Selling (Dr. Megan Good) and tested in commercial sales operations (Sierra Chevrolet, Daniel's Jewelers), I will spearhead market mapping across pediatric primary care clinics, developmental specialists, and school districts to build predictable patient pipelines.
+4. Autonomous Execution & Workstream Ownership: Dr. Megan Good validated my "tenacity and ability to perform and communicate under pressure" and mastery of "unsupervised problem-solving." I will autonomously drive consulting workstreams and eliminate strategic bottlenecks.
+5. Management Consulting Polish & Discretion: My coursework at Georgetown and Harvard Extension School instills the analytical precision, active listening, and high-trust discretion expected in top-tier management consultancy (noted by Harvard Senior Lecturer Anne Taieb).
 
-I have prepared an interactive candidate portfolio and hiring committee dossier with all 7 verified endorsement letters, transcripts, and a 90-day operational scaling blueprint for your review.
+I have prepared an interactive candidate portfolio and hiring committee dossier with all 7 verified endorsement letters, transcripts, and a 90-day consulting and scaling blueprint for your review.
 
 I would welcome the opportunity to discuss how my strategic preparation and relentless work ethic will support Chris and the Oaklin Lane team in building a national pediatric therapy leader.
 
@@ -553,25 +553,25 @@ Warm regards,
 Donna Aseret Rivas
 Georgetown University SCS | Harvard Extension School | Cal Poly Pomona BSBA
 Email: donnaarivas10@gmail.com
-Targeting: Chief of Staff in Training / Oaklin Lane`
+Targeting: Consulting & Strategy Intern — Oaklin Lane`
   },
   comprehensive: {
-    subject: 'Strategic Application & Candidate Dossier: Chief of Staff in Training (Oaklin Lane) — Donna Rivas',
+    subject: 'Strategic Application & Candidate Dossier: Consulting & Strategy Intern (Oaklin Lane) — Donna Rivas',
     body: `Dear Chris Callander and TBD Investors Selection Committee,
 
-Thank you for inviting me to consider the Chief of Staff in Training role with Oaklin Lane. Having applied to TBD Investors out of a deep respect for your thesis-driven approach to backing transformative businesses, I am thrilled by the prospect of joining Oaklin Lane at this critical inflection point.
+Thank you for inviting me to consider the Consulting & Strategy Intern role with Oaklin Lane. Having applied to TBD Investors out of a deep respect for your thesis-driven approach to backing transformative businesses, I am thrilled by the prospect of joining Oaklin Lane at this critical inflection point.
 
 I. WHY THIS MISSION MATTERS TO ME
 My enthusiasm for Oaklin Lane is rooted in a core conviction: that early, high-quality pediatric intervention can permanently alter a child's developmental trajectory and unlock lifelong opportunity for families. In an increasingly fragmented healthcare landscape, millions of children face debilitating waitlists or geographic barriers to essential speech, occupational, and physical therapies. My personal career ambition has always been to apply rigorous strategic thinking and financial discipline not merely for commercial growth, but to solve high-stakes societal bottlenecks. Scaling Oaklin Lane’s clinic footprint means directly expanding care capacity for underserved communities—ensuring that every child, regardless of zip code, receives compassionate, world-class clinical support.
 
-II. HOW MY BACKGROUND DIRECTLY EMPOWERS CHRIS CALLANDER & OAKLIN LANE
-• Strategic Intelligence & Executive Decision Support: In my Strategic Management program at Georgetown University, my research focused on diagnosing complex organizational frameworks and distilling multi-variable datasets into actionable executive briefings (Prof. Gary Steinberg).
-• Executive Presentation & Capstone Delivery: Leading the strategic analysis for the American Express capstone project demonstrated my ability to evaluate enterprise-level challenges and present compelling, structured solutions (Dr. John Corso endorsement).
-• Commercial Discipline & Revenue Strategy: Under Dr. Megan Good at Cal Poly Pomona, I honed B2B strategic selling frameworks, projecting organizational outcomes, and driving unsupervised problem-solving in high-pressure settings. Combined with real-world sales execution at Sierra Chevrolet and Daniel's Jewelers, I know how to navigate provider and community relationships to build dependable patient referral pipelines.
-• Financial Modeling & Operational Economics: Trained in Managerial Finance (FRL 3000, Dr. Paul Sarmas), I am ready to dive into clinic-level P&Ls, therapist scheduling algorithms, patient acquisition costs, and capacity planning.
-• Professionalism, Discretion & High Integrity: As commended by Harvard Senior Lecturer Anne Taieb, I bring the interpersonal poise, cultural awareness, and utmost discretion required of a CEO's right hand.
+II. HOW MY STRATEGIC TOOLKIT EMPOWERS OAKLIN LANE'S ENGAGEMENTS
+• Diagnostic & Quantitative Research: In my Strategic Management program at Georgetown University, my research focused on diagnosing complex organizational frameworks, market mapping, and distilling multi-variable datasets into actionable executive briefings (Prof. Gary Steinberg).
+• Slide Deck Architecture & Capstone Delivery: Leading the strategic analysis for the American Express capstone project demonstrated my ability to evaluate enterprise-level challenges and synthesize structured, client-ready presentations (Dr. John Corso endorsement).
+• Commercial Strategy & Pipeline Mechanics: Under Dr. Megan Good at Cal Poly Pomona, I honed B2B strategic selling frameworks, projecting organizational outcomes, and driving unsupervised problem-solving in high-pressure settings. Combined with real-world sales execution at Sierra Chevrolet and Daniel's Jewelers, I know how to evaluate healthcare referral networks.
+• Financial Modeling & Unit Economics: Trained in Managerial Finance (FRL 3000, Dr. Paul Sarmas), I build dynamic financial models, clinic-level P&Ls, therapist scheduling algorithms, and capacity planning tools.
+• Professionalism, Discretion & High Integrity: As commended by Harvard Senior Lecturer Anne Taieb, I bring the interpersonal poise, cultural awareness, and utmost discretion required in management consultancy.
 
-I am ready to roll up my sleeves and provide immediate, high-leverage support to Chris across clinic throughput, regional market launches, and investor reporting.
+I am ready to roll up my sleeves and provide immediate, high-leverage strategic support across clinic throughput, market mapping, and client deliverables.
 
 Sincerely,
 
@@ -580,19 +580,19 @@ Georgetown University SCS • Harvard Extension • Cal Poly Pomona BSBA
 donnaarivas10@gmail.com`
   },
   operational: {
-    subject: 'Operational & Strategic Value Contribution: Chief of Staff in Training — Donna Rivas for Oaklin Lane',
+    subject: 'Operational & Strategic Value Contribution: Consulting & Strategy Intern — Donna Rivas for Oaklin Lane',
     body: `Dear Chris and the Hiring Committee,
 
-I am writing to submit my application for the Chief of Staff in Training position at Oaklin Lane. Scaling a pediatric therapy organization from regional footprint to national leader requires rigorous operational cadence, clinic capacity optimization, and relentless execution—disciplines that define my academic and professional background.
+I am writing to submit my application for the Consulting & Strategy Intern position at Oaklin Lane. Scaling a pediatric therapy organization from regional footprint to national leader requires rigorous strategic cadence, analytical modeling, and structured execution—disciplines that define my academic and professional background.
 
 Mission Alignment:
 Early pediatric therapy intervention changes children's lives. Scaling this access nationwide with uncompromised quality is a calling that aligns with my dedication to impactful operational stewardship.
 
 Key Pillars of My Immediate Contribution:
-1. Operational Cadence & Execution Engine: Dr. Megan Good (Singelyn Graduate School of Business) noted my "tenacity and ability to perform and communicate under pressure" and mastery of "unsupervised problem-solving." I will take ownership of cross-functional tracking, clinic launch checklists, and daily executive prioritization.
+1. Analytical Rigor & Workstream Ownership: Dr. Megan Good (Singelyn Graduate School of Business) noted my "tenacity and ability to perform and communicate under pressure" and mastery of "unsupervised problem-solving." I will take ownership of discrete workstream modules, project tracking, and deliverable execution.
 2. Managerial Finance & Unit Economics: Supported by Dr. Paul Sarmas (Finance, Cal Poly Pomona), my financial training enables me to model therapist productivity, optimize clinic chair utilization, and analyze geographic market feasibility.
-3. Strategic Case Analysis (Georgetown SCS): Having developed frameworks for corporate structural evaluation and data synthesis under Prof. Gary Steinberg, I can immediately assist Chris with Board/TBD Investors presentations, KPI dashboards, and expansion diligence.
-4. Front-Line Commercial Experience: My direct sales track record at Daniel's Jewelers and Sierra Chevrolet proves my comfort in engaging external stakeholders—critical for building relationships with pediatricians, speech/OT clinics, and school districts.
+3. Strategic Case Analysis (Georgetown SCS): Having developed frameworks for corporate structural evaluation and data synthesis under Prof. Gary Steinberg, I can immediately assist with Board/TBD Investors presentations, KPI dashboards, and expansion diligence.
+4. Client-Ready Communication: My direct sales track record at Daniel's Jewelers and Sierra Chevrolet paired with Harvard and Georgetown training ensures polished, structured communication across executive and clinical stakeholders.
 
 Best regards,
 
@@ -600,17 +600,17 @@ Donna Aseret Rivas
 donnaarivas10@gmail.com`
   },
   mission_focused: {
-    subject: 'Mission-Driven Application: Chief of Staff in Training at Oaklin Lane — Donna Rivas',
+    subject: 'Mission-Driven Application: Consulting & Strategy Intern at Oaklin Lane — Donna Rivas',
     body: `Dear Chris Callander and TBD Investors Selection Committee,
 
 When I reviewed the mission of Oaklin Lane—building a national leader in pediatric therapy to expand access to high-quality care for children and families—I immediately recognized the exact mission-driven environment where I want to dedicate my energy and capabilities.
 
 My enthusiasm for Oaklin Lane is rooted in a core conviction: that early, high-quality pediatric intervention can permanently alter a child's developmental trajectory and unlock lifelong opportunity for families. In an increasingly fragmented healthcare landscape, millions of children face debilitating waitlists or geographic barriers to essential speech, occupational, and physical therapies. My personal career ambition has always been to apply rigorous strategic thinking and financial discipline not merely for commercial growth, but to solve high-stakes societal bottlenecks. Scaling Oaklin Lane’s clinic footprint means directly expanding care capacity for underserved communities—ensuring that every child, regardless of zip code, receives compassionate, world-class clinical support.
 
-Why I Am uniquely Positioned to Support Chris Callander:
+Why I Am uniquely Positioned to Support Oaklin Lane:
 • Georgetown & Harvard Alignment: Bridging strategic management frameworks from Georgetown SCS with the interpersonal polish and consultancy standards observed during my studies at Harvard Extension School.
-• Actionable Business Intelligence: Proven ability to synthesize complex operational data to support forward-thinking executive decisions (Prof. Gary Steinberg).
-• Commercial & Financial Discipline: Grounded in managerial finance (Dr. Paul Sarmas) and B2B sales execution (Dr. Megan Good), ready to drive clinic expansion and provider network development.
+• Actionable Business Intelligence: Proven ability to synthesize complex operational data to support forward-thinking strategic decisions (Prof. Gary Steinberg).
+• Quantitative & Financial Discipline: Grounded in managerial finance (Dr. Paul Sarmas) and B2B sales strategy (Dr. Megan Good), ready to drive expansion analysis and provider network development.
 • Deep Dedication & Personal Character: Consistently recognized across all academic and professional mentors for utmost integrity, high personal responsibility, and exceptional work ethic.
 
 Warmest regards,

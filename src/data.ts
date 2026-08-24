@@ -60,14 +60,14 @@ export const CANDIDATE = {
   fullName: 'Donna Aseret Rivas',
   preferredName: 'Donna Rivas',
   monogram: 'DR',
-  title: 'Chief of Staff in Training | Strategic Operations & Growth Execution',
+  title: 'Consulting & Strategy Intern | Strategic Deliverables & Growth Execution',
   email: 'dar159@georgetown.edu',
   phone: '(424) 478-1969',
   linkedin: 'https://www.linkedin.com',
   targetAudience: 'Chris Callander (Oaklin Lane) & Dimitri Ivanov (TBD Investors)',
   location: 'Remote',
-  headlineSummary: 'Bridging analytical rigor, operational execution, and mission-driven leadership to help scale Oaklin Lane’s national pediatric therapy network.',
-  executivePitch: 'Disciplined, high-leverage operator with legal and regulatory training from Pepperdine University Caruso School of Law, a Professional Certificate in Strategic Management from Georgetown University, Core Business Essentials coursework from Harvard University, and a BSBA in Marketing Management with a 4.0 GPA from Cal Poly Pomona. Proven track record in deploying custom CRM architectures, driving revenue growth (+ $470K at Maserati), streamlining operational cycle times (-20%), and conducting comparative legal research. Built to serve as a relentless force multiplier for CEO Chris Callander and TBD Investors.',
+  headlineSummary: 'Bridging analytical rigor, structured synthesis, and consulting execution to help scale Oaklin Lane’s national pediatric therapy network.',
+  executivePitch: 'Disciplined, high-leverage operator with legal and regulatory training from Pepperdine University Caruso School of Law, a Professional Certificate in Strategic Management from Georgetown University, Core Business Essentials coursework from Harvard University, and a BSBA in Marketing Management with a 4.0 GPA from Cal Poly Pomona. Proven track record in deploying custom CRM architectures, driving revenue growth (+ $470K at Maserati), streamlining operational cycle times (-20%), and conducting comparative legal research. Built to serve as a relentless consulting and strategy contributor for CEO Chris Callander and TBD Investors.',
   status: 'Ready for Immediate Deployment'
 };
 
@@ -75,7 +75,7 @@ export const PERSPECTIVE_DATA = {
   ceo: {
     lensNumber: '01',
     label: 'CEO Lens (Chris Callander • Oaklin Lane)',
-    track: 'Chief of Staff Track',
+    track: 'Consulting & Strategy Track',
     badge: 'CEO Leverage',
     specTag: 'Bandwidth Multiplication',
     title: 'CEO Lens: Operational Bandwidth & Scaling Velocity',

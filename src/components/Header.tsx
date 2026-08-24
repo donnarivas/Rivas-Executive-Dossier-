@@ -142,11 +142,11 @@ export const Header: React.FC<HeaderProps> = ({
                   ? 'bg-blue-50 text-blue-700 border border-blue-200 font-semibold'
                   : 'bg-slate-900 text-white'
               }`}>
-                Chief of Staff Candidate
+                Consulting & Strategy Intern
               </span>
             </div>
             <p className={`text-xs sm:text-sm font-medium ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-              Strategy & Operations Intern @ Oaklin Lane (CEO Chris Callander & TBD Investors)
+              Consulting & Strategy Intern @ Oaklin Lane (CEO Chris Callander & TBD Investors)
             </p>
           </div>
 

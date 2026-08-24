@@ -25,10 +25,10 @@ export const ChiefOfStaffRoadmap: React.FC = () => {
           Operational Roadmap
         </h2>
         <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 font-serif">
-          Chief of Staff 90-Day Scaling Blueprint
+          Consulting & Strategy 90-Day Action Plan
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl leading-relaxed font-sans">
-          Proactive execution roadmap demonstrating how Donna Rivas will provide immediate, high-leverage support to CEO Chris Callander in scaling Oaklin Lane's pediatric therapy clinic network.
+          Proactive execution roadmap demonstrating how Donna Rivas will provide analytical rigor, structured synthesis, and high-leverage consulting support to CEO Chris Callander in scaling Oaklin Lane's pediatric therapy network.
         </p>
       </div>
 

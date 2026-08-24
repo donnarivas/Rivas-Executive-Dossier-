@@ -75,7 +75,7 @@ export const ExecutiveSummaryHero: React.FC<ExecutiveSummaryHeroProps> = ({ onNa
               </h2>
               <p className="text-sm font-bold text-white font-mono">internship@tbdinvestors.com</p>
               <p className="text-[11px] text-slate-400 mt-2 leading-relaxed">
-                Ref: Consulting & Strategy Opportunity / Oaklin Lane Chief of Staff in Training
+                Ref: Consulting & Strategy Opportunity / Oaklin Lane Consulting & Strategy Intern
               </p>
             </div>
 

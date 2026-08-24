@@ -1343,7 +1343,7 @@ export const FacultyEndorsementsSection: React.FC<{
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#D9532F]" />
                     <span className="font-mono text-xs font-bold text-slate-900 uppercase tracking-wider">
-                      Strategic Analysis: Chief of Staff & Oaklin Lane Relevance
+                      Strategic Analysis: Consulting & Strategy & Oaklin Lane Relevance
                     </span>
                   </div>
 

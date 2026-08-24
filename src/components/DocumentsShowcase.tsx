@@ -141,7 +141,7 @@ export const DocumentsShowcase: React.FC = () => {
 
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">
-                  Chief of Staff Alignment
+                  Consulting & Strategy Alignment
                 </span>
                 <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
                   {doc.relevanceToRole}

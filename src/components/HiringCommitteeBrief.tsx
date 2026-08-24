@@ -87,7 +87,7 @@ export const HiringCommitteeBrief: React.FC<HiringCommitteeBriefProps> = ({ curr
                 ? 'bg-purple-950/60 text-purple-300 border-purple-800'
                 : 'bg-slate-800/90 text-slate-200 border-slate-700'
             }`}>
-              Role: Chief of Staff in Training
+              Role: Consulting & Strategy Intern
             </span>
           </div>
         </div>
@@ -95,7 +95,7 @@ export const HiringCommitteeBrief: React.FC<HiringCommitteeBriefProps> = ({ curr
         {/* Section Navigation Tabs */}
         <div className="mt-7 pt-5 border-t border-slate-700/70 flex flex-wrap gap-2">
           {[
-            { id: 'experiences', label: '1. Key Experiences & CEO Contributions (5 Pillars)' },
+            { id: 'experiences', label: '1. Key Experiences & Strategic Contributions (5 Pillars)' },
             { id: 'mission', label: '2. Mission Alignment & Personal Values' },
             { id: 'frameworks', label: '3. Analytical Scaling Methodologies (5 Frameworks)' }
           ].map((tab) => (
@@ -136,7 +136,7 @@ export const HiringCommitteeBrief: React.FC<HiringCommitteeBriefProps> = ({ curr
               Candidate Competency Assessment
             </h2>
             <h3 className={`text-lg sm:text-xl font-bold ${isEditorial ? 'font-serif-display text-stone-900' : isDark ? 'text-white' : 'text-slate-900'}`}>
-              5 Core Experiences Mapped to Chief of Staff in Training Responsibilities
+              5 Core Experiences Mapped to Consulting & Strategy Intern Responsibilities
             </h3>
             <p className={`text-xs sm:text-sm mt-1 leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
               Synthesizing Donna's academic training from Georgetown University and Harvard Extension with her commercial finance and sales operations experience—framed as direct, high-leverage value drivers for CEO Chris Callander.

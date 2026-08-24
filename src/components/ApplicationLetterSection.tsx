@@ -73,7 +73,7 @@ export const ApplicationLetterSection: React.FC = () => {
               Application Note for Chris Callander & TBD Investors
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl leading-relaxed">
-              Tailored specifically for <strong>internship@tbdinvestors.com</strong>. Articulates why the Oaklin Lane Chief of Staff in Training role appeals to Donna and connects all 7 verified documentation credentials to prove immediate strategic contribution.
+              Tailored specifically for <strong>internship@tbdinvestors.com</strong>. Articulates why the Oaklin Lane Consulting & Strategy Intern role appeals to Donna and connects all 7 verified documentation credentials to prove immediate strategic contribution.
             </p>
           </div>
 

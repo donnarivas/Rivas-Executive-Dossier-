@@ -51,7 +51,7 @@ export const PrintableDossier: React.FC<PrintableDossierProps> = ({ isOpen, onCl
                 {CANDIDATE_PROFILE.fullName}
               </h1>
               <p className="text-sm font-bold text-slate-900 uppercase mt-0.5">
-                Chief of Staff in Training Dossier • Oaklin Lane
+                Consulting & Strategy Intern Dossier • Oaklin Lane
               </p>
               <p className="text-xs text-slate-500 mt-1 font-mono">
                 Email: {CANDIDATE_PROFILE.candidateEmail} • Submission Target: {CANDIDATE_PROFILE.email}
